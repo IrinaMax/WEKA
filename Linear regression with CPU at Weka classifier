@@ -1,4 +1,5 @@
-#
+# Model Tree at Weka using function Linear regression
+
 === Run information ===
 
 Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
@@ -40,3 +41,6 @@ Relative absolute error                 42.6943 %
 Root relative squared error             43.2421 %
 Total Number of Instances              209     
 
+# Model tree
+- each leaf has a linear regression model
+- linear patches approximatr continuous function
