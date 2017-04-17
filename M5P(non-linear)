@@ -1,0 +1,92 @@
+# This is Non-linear Approach for the same CPU data. Look at this and compare the result with linear model ;)
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.M5P -M 4.0
+Relation:     cpu
+Instances:    209
+Attributes:   7
+              MYCT
+              MMIN
+              MMAX
+              CACH
+              CHMIN
+              CHMAX
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+M5 pruned model tree:
+(using smoothed linear models)
+
+CHMIN <= 7.5 : LM1 (165/12.903%)
+CHMIN >  7.5 : 
+|   MMAX <= 28000 : 
+|   |   MMAX <= 13240 : 
+|   |   |   CACH <= 81.5 : LM2 (6/18.551%)
+|   |   |   CACH >  81.5 : LM3 (4/30.824%)
+|   |   MMAX >  13240 : LM4 (11/24.185%)
+|   MMAX >  28000 : LM5 (23/48.302%)
+
+LM num: 1
+class = 
+	-0.0055 * MYCT 
+	+ 0.0013 * MMIN 
+	+ 0.0029 * MMAX 
+	+ 0.8007 * CACH 
+	+ 0.4015 * CHMAX 
+	+ 11.0971
+
+LM num: 2
+class = 
+	-1.0307 * MYCT 
+	+ 0.0086 * MMIN 
+	+ 0.0031 * MMAX 
+	+ 0.7866 * CACH 
+	- 2.4503 * CHMIN 
+	+ 1.1597 * CHMAX 
+	+ 70.8672
+
+LM num: 3
+class = 
+	-1.1057 * MYCT 
+	+ 0.0086 * MMIN 
+	+ 0.0031 * MMAX 
+	+ 0.7995 * CACH 
+	- 2.4503 * CHMIN 
+	+ 1.1597 * CHMAX 
+	+ 83.0016
+
+LM num: 4
+class = 
+	-0.8813 * MYCT 
+	+ 0.0086 * MMIN 
+	+ 0.0031 * MMAX 
+	+ 0.6547 * CACH 
+	- 2.3561 * CHMIN 
+	+ 1.1597 * CHMAX 
+	+ 82.5725
+
+LM num: 5
+class = 
+	-0.4882 * MYCT 
+	+ 0.0218 * MMIN 
+	+ 0.003 * MMAX 
+	+ 0.3865 * CACH 
+	- 1.3252 * CHMIN 
+	+ 3.3671 * CHMAX 
+	- 51.8474
+
+Number of Rules : 5
+
+Time taken to build model: 0.05 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.9274
+Mean absolute error                     29.8309
+Root mean squared error                 60.7112
+Relative absolute error                 30.9967 %
+Root relative squared error             37.7434 %
+Total Number of Instances              209     
