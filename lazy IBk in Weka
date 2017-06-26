@@ -1,12 +1,5 @@
 # WEKA. data german_credit.
-# Implements John Platt's sequential minimal optimization algorithm for training a support vector classifier.
-  This implementation globally replaces all missing values and transforms nominal attributes into binary ones. 
-  It also normalizes all attributes by default. (In that case the coefficients in the output are based on the normalized data, 
-  not the original data --- this is important for interpreting the classifier.)
 
-# calibrator(function): Logistic.Class for building and using a multinomial logistic regression model with a ridge estimator.
-# Cross-validation 10 fold
-# Kernel: PolyKernel -E 1.0  The polynomial kernel : K(x, y) = <x, y>^p or K(x, y) = (<x, y>+1)^p
 # Classifier output
 
 === Run information ===
