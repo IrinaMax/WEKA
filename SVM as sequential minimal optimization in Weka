@@ -5,9 +5,10 @@
   not the original data --- this is important for interpreting the classifier.)
 
 # calibrator(function): Logistic.Class for building and using a multinomial logistic regression model with a ridge estimator.
-
 # Cross-validation 10 fold
+# Kernel: PolyKernel -E 1.0  The polynomial kernel : K(x, y) = <x, y>^p or K(x, y) = (<x, y>+1)^p
 # Classifier output
+
 === Run information ===
 
 Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
