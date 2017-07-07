@@ -1,0 +1,281 @@
+The AdaBoostM1 in Weka is Class for boosting a nominal class classifier using the Adaboost M1 method. 
+Only nominal class problems can be tackled. Often dramatically improves performance, but sometimes overfits.
+The output on the iris.2D.arff file
+
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     iris-weka.filters.unsupervised.attribute.Remove-R1-2
+Instances:    150
+Attributes:   3
+              petallength
+              petalwidth
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-setosa
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.0	0.5	0.5	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.3333333333333333	0.3333333333333333	0.3333333333333333	
+
+
+Weight: 0.69
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-virginica
+petallength is missing : Iris-virginica
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.0	0.3333333333333333	0.6666666666666667	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.25	0.25	0.5000000000000001	
+
+
+Weight: 1.1
+
+Decision Stump
+
+Classifications
+
+petalwidth <= 1.75 : Iris-versicolor
+petalwidth > 1.75 : Iris-virginica
+petalwidth is missing : Iris-versicolor
+
+Class distributions
+
+petalwidth <= 1.75
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.24154589371980675	0.7101449275362319	0.04830917874396136	
+petalwidth > 1.75
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.0	0.032258064516129024	0.967741935483871	
+petalwidth is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.16666666666666666	0.5	0.33333333333333337	
+
+
+Weight: 1.32
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-setosa
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+2.4541772123292933E-17	0.55363091272485	0.44636908727514996	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.3968253968253968	0.33393610608800484	0.26923849708659847	
+
+
+Weight: 1.0
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-virginica
+petallength is missing : Iris-virginica
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+4.876852104094113E-17	0.31364408378939285	0.6863559162106071	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.27151498487764564	0.22848501512235284	0.5000000000000016	
+
+
+Weight: 1.22
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-versicolor
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+-1.2574765214077044E-17	0.606768299275597	0.3932317007244031	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.17596222380612905	0.5	0.32403777619387086	
+
+
+Weight: 0.74
+
+Decision Stump
+
+Classifications
+
+petallength <= 4.85 : Iris-versicolor
+petallength > 4.85 : Iris-virginica
+petallength is missing : Iris-virginica
+
+Class distributions
+
+petallength <= 4.85
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.2517002096709582	0.660989158028418	0.08731063230062384	
+petallength > 4.85
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.379474925594973E-17	0.05806433264820551	0.9419356673517946	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.1301568472386974	0.36984315276130325	0.49999999999999944	
+
+
+Weight: 1.37
+
+Decision Stump
+
+Classifications
+
+petalwidth <= 0.8 : Iris-setosa
+petalwidth > 0.8 : Iris-virginica
+petalwidth is missing : Iris-virginica
+
+Class distributions
+
+petalwidth <= 0.8
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petalwidth > 0.8
+Iris-setosa	Iris-versicolor	Iris-virginica	
+-2.1770354695540205E-18	0.41688966375240305	0.583110336247597	
+petalwidth is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.3200398492036892	0.28346835863050723	0.3964917921658035	
+
+
+Weight: 0.93
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-versicolor
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+3.621292691813957E-17	0.6437704901626133	0.3562295098373866	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.2233256919345557	0.4999999999999997	0.2766743080654447	
+
+
+Weight: 0.96
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-virginica
+petallength is missing : Iris-virginica
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.1378476401045689E-17	0.4087218990793083	0.5912781009206917	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.15437422894330288	0.3456257710566977	0.4999999999999995	
+
+
+Weight: 0.64
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.069 
+Root mean squared error                  0.1729
+Relative absolute error                 15.5267 %
+Root relative squared error             36.6863 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.900    0.020    0.957      0.900    0.928      0.894    0.963     0.894     Iris-versicolor
+                 0.960    0.050    0.906      0.960    0.932      0.897    0.965     0.922     Iris-virginica
+Weighted Avg.    0.953    0.023    0.954      0.953    0.953      0.931    0.976     0.939     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 45  5 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+
