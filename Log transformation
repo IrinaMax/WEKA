@@ -1,0 +1,35 @@
+## the lin ger was perform with slug.arff dataset, use linear regression to predict the weight from the length, 
+and determine the correlation coefficient using 10-fold cross-validation is 0.91.
+
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     slug
+Instances:    100
+Attributes:   2
+              length
+              weight
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+weight =
+
+      0.1109 * length +
+     -2.4937
+
+Time taken to build model: 0.1 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.9056
+Mean absolute error                      0.9059
+Root mean squared error                  1.2725
+Relative absolute error                 38.3999 %
+Root relative squared error             41.6248 %
+Total Number of Instances              100     
+
