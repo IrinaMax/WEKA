@@ -33,3 +33,42 @@ Relative absolute error                 38.3999 %
 Root relative squared error             41.6248 %
 Total Number of Instances              100     
 
+##  it seems from the graph of weight versus length that a logarithmic transform of one or both attributes may help the performance of linear regression. This can be done using Weka’s AddExpression filter.
+ Preprocess panel >  Filter > AddExpression > in properties >expression > log(a1)     # for first attribute 
+ Preprocess panel >  Filter > AddExpression > in properties >expression > log(a2)     #for second attribute
+ and give them names logL and logW. Then fit Linear reg again, here is output
+ 
+ === Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     slug-weka.filters.unsupervised.attribute.AddExpression-E0.0-Nlog-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.AddExpression-Elog(a1)-Nlog
+Instances:    100
+Attributes:   3
+              length
+              weight
+              log
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+log =
+
+      0.0343 * length +
+     -0.0917 * weight +
+      2.3151
+
+Time taken to build model: 0.03 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.9722
+Mean absolute error                      0.1129
+Root mean squared error                  0.1454
+Relative absolute error                 21.6292 %
+Root relative squared error             23.2739 %
+Total Number of Instances              100     
+ 
