@@ -72,3 +72,8 @@ Relative absolute error                 21.6292 %
 Root relative squared error             23.2739 %
 Total Number of Instances              100     
  
+ ##
+ the new attribute that is obtained by applying a logarithmic transform has higher mean and smaller SD.
+ If apply Linear regression to predict log weight from log length,then 
+ the correlation coefficient using 10-fold cross-validation is  0.9722 ! with is almost perfect! :)
+ 
