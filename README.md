@@ -4,8 +4,7 @@
 Department of Computer Science 
 University of Waikato
 
-Screenshot of Weka Explorer
-Go to course
+https://weka.waikato.ac.nz/dataminingwithweka/preview
 
 University of Waikato Waikato Courses
 ## Univerisy of Waikato
