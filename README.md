@@ -1,6 +1,6 @@
 # WEKA
  Weka is a powerful, yet easy to use tool for machine learning and data mining. This course introduces you to practical data mining.
-# Certificate
+# Certificate Univerisy of Waikato
 https://www.futurelearn.com/certificates/hj7t8j1
  
  
@@ -10,5 +10,5 @@ University of Waikato
 
 https://weka.waikato.ac.nz/dataminingwithweka/preview
 
-University of Waikato Waikato Courses
-## Univerisy of Waikato
+## University of Waikato Waikato Courses
+
