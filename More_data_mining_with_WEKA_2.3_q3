@@ -1,0 +1,41 @@
+Question 3
+Create four new versions of the ionosphere data, all of whose attributes are discrete, by applying the unsupervised discretization filter 
+with the four option combinations and default number of bins (10), and write out each resulting dataset. Then use the Experimenter (not 
+the Explorer) to evaluate the classification accuracy using ten repetitions of 10-fold cross-validation (the Experimenter’s default), 
+using J48 and the five datasets (including the original ionosphere.arff).
+
+What percentage accuracy do you get using J48? Fill in the table below.
+
+[Hint: the answers are 87, 89, 90, 92, 93 – but in a different order]
+ 
+with equal-width bins 
+with equal-frequency bins 
+equal-width + binary attributes 
+equal-freq + binary attributes
+original ionosphere data
+
+Tester output:
+Tester:     weka.experiment.PairedCorrectedTTester -G 1 -D 4,5,6 -R 2 -S 0.05 -V -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -show-stddev -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   1
+Resultsets: 5
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       3/27/18 10:51 PM
+
+
+Dataset                   (1) ionosphere-uns | (2) ionosphere- (3) ionosphere- (4) ionosphere- (5) ionosphere 
+--------------------------------------------------------------------------------------------------------------
+trees.J48 '-C 0.25 -M 2' (100)   87.47(5.17) |   89.38(4.85)     92.71(3.65) v   92.08(4.35) v   89.74(4.38)  
+--------------------------------------------------------------------------------------------------------------
+                                     (v/ /*) |         (0/1/0)         (1/0/0)         (1/0/0)         (0/1/0)
+
+
+Key:
+(1) ionosphere-unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6-spread-attribute-weight
+(2) ionosphere-unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+(3) ionosphere-unsupervised.attribute.Discretize-D-B10-M-1.0-Rfirst-last-precision6
+(4) ionosphere-unsupervised.attribute.Discretize-D-F-B10-M-1.0-Rfirst-last-precision6
+(5) ionosphere
+
+We can see here the number 3 data set with filter of equal-width + binary attributes won with 93% accuracy.
