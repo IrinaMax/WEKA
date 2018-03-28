@@ -39,3 +39,10 @@ Key:
 (5) ionosphere
 
 We can see here the number 3 data set with filter of equal-width + binary attributes won with 93% accuracy.
+
+Using the Experimenter, compare the binary-attribute and non-binary-attribute versions of equal-width-binning at the 5% level 
+(Weka’s default). (Note: you will have to re-select the row and column in the Analyse panel, and then re-select the test base.)
+
+For equal-width binning, is the binary-attribute version significantly better than the non-binary-attribute version (at the 5% level)?
+
+
