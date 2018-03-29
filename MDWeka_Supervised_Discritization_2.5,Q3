@@ -28,3 +28,9 @@ Key:
 (2) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W trees.J48 -- -C 0.25 -M 2' -4523450618538717400
 (3) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W rules.OneR -- -B 6' -4523450618538717400
 
+The two classifiers produce the same results on the discretized dataset because further filtering has no effect – nominal attributes are 
+unchanged by discretization. Thus you should compare the FilteredClassifier on the two datasets. Do this by selecting the Scheme as the 
+Row and the Dataset as the Column, and looking at the row corresponding to the FilteredClassifier.
+In this case J48 obtains 89.49% on the discretized dataset (cheating) and 90.12% when used in the filtered classifier on the 
+original dataset (not cheating). This is slightly surprising. In general one would expect “cheating” to help a little, 
+but not necessarily in every case.
