@@ -1,0 +1,30 @@
+2.5
+Discretize the ionosphere.arff dataset using supervised discretization with default parameters, and save the result. 
+Then set up the Experimenter with two datasets, the original ionosphere dataset and this discretized version that you just saved, 
+and two classifiers, OneR and the FilteredClassifier configured to use the supervised discretization filter and the OneR classifier. 
+(default parameters used)
+
+Run the experiment.
+
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   2
+Resultsets: 3
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       3/28/18 11:09 PM
+
+
+Dataset                   (1) rules.On | (2) meta. (3) meta.
+------------------------------------------------------------
+ionosphere               (100)   82.28 |   90.12 v   85.87 v
+ionosphere-weka.filters.s(100)   87.75 |   89.49     87.75  
+------------------------------------------------------------
+                               (v/ /*) |   (1/1/0)   (1/1/0)
+
+
+Key:
+(1) rules.OneR '-B 6' -3459427003147861443
+(2) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W trees.J48 -- -C 0.25 -M 2' -4523450618538717400
+(3) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W rules.OneR -- -B 6' -4523450618538717400
+
