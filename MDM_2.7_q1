@@ -5,32 +5,27 @@ best configuration of all the discretization filters)?
 Use the Experimenter to compare the two on these datasets: diabetes.arff, glass.arff, ionosphere.arff, iris.arff, and schizo.arff 
 ( default settings throughout).
 
-I made 2 sets in Experimenters, first 5 originak data sets and next 5 sage with [makeBinary] true.
+
 Weka Result:
 
 Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -V -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -show-stddev -print-col-names -print-row-names -enum-col-names"
 Analysing:  Percent_correct
-Datasets:   9
+Datasets:   5
 Resultsets: 2
 Confidence: 0.05 (two tailed)
 Sorted by:  -
-Date:       3/29/18 10:35 PM
+Date:       3/29/18 10:52 PM
 
 
 Dataset                   (1) meta.FilteredCl | (2) trees.J48 '
 ---------------------------------------------------------------
-pima_diabetes            (200)   74.32( 4.77) |   74.49(5.25)  
+pima_diabetes            (100)   74.32( 4.78) |   74.49(5.27)  
 Glass                    (100)   72.31(10.15) |   67.63(9.31)  
 ionosphere               (100)   90.12( 4.87) |   89.74(4.38)  
 iris                     (100)   93.60( 5.27) |   94.73(5.30)  
 schizo-                  (100)   72.35(11.46) |   82.32(8.80) v
 ---------------------------------------------------------------
-Glass-weka.filters.superv(100)   73.25( 9.02) |   73.25(9.02)  
-ionosphere-weka.filters.s(100)   94.08( 3.94) |   94.08(3.94)  
-iris-weka.filters.supervi(100)   93.87( 4.89) |   93.87(4.89)  
-schizo--weka.filters.supe(100)   81.09( 5.87) |   81.09(5.87)  
----------------------------------------------------------------
-                                      (v/ /*) |         (1/8/0)
+                                      (v/ /*) |         (1/4/0)
 
 
 Key:
@@ -38,6 +33,44 @@ Key:
 (2) trees.J48 '-C 0.25 -M 2' -217733168393644444
 
 
+
+
 Question 1
 For which datasets does J48’s built-in discretization give better results than the FilteredClassifer?
-We can see Diabeties, Iris and Schizo  trees J48 give better result then Meta
+We can see Diabeties, Iris and Schizo  trees J48 give better result then Meta.
+
+Question2.
+Schizo dataset does J48’s built-in discretization give significantly better results (at the 5% level).
+
+Question3
+Repeat with the classifiers JRip and PART (use default settings throughout), comparing them on the above datasets with and 
+without Weka’s supervised Discretize filter with the makeBinary option set. This time, look at just the results that are statistically 
+significant (at the 5% level).
+
+For which dataset (if any) does JRip’s built-in discretization gives significantly better results than the Filtered Classifer?
+Answer: Schizo, look at the Weka tester result.
+
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -V -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -show-stddev -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   5
+Resultsets: 4
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       3/29/18 11:01 PM
+
+
+Dataset                   (1) rules.JRip '-F | (2) meta.Filtere (3) rules.PART ' (4) meta.Filtere
+-------------------------------------------------------------------------------------------------
+pima_diabetes            (100)   75.18(4.54) |   74.35( 4.85)     73.45( 4.51)     74.12( 4.84)  
+Glass                    (100)   66.78(9.65) |   68.35( 9.27)     68.75(10.60)     71.85( 9.85)  
+ionosphere               (100)   89.16(4.64) |   90.92( 5.18)     90.83( 4.66)     89.41( 4.72)  
+iris                     (100)   94.47(5.85) |   93.33( 5.53)     94.20( 5.25)     94.20( 5.50)  
+schizo-                  (100)   82.85(7.28) |   70.29(11.63) *   76.59( 9.93)     72.26(11.50) *
+-------------------------------------------------------------------------------------------------
+                                     (v/ /*) |          (0/4/1)          (0/5/0)          (0/4/1)
+
+Key:
+(1) rules.JRip '-F 3 -N 2.0 -O 2 -S 1' -6589312996832147161
+(2) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W rules.JRip -- -F 3 -N 2.0 -O 2 -S 1' -4523450618538717400
+(3) rules.PART '-M 2 -C 0.25 -Q 1' 8121455039782598361
+(4) meta.FilteredClassifier '-F \"supervised.attribute.Discretize -R first-last -precision 6\" -S 1 -W rules.PART -- -M 2 -C 0.25 -Q 1' -4523450618538717400
