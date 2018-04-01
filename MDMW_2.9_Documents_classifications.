@@ -1,0 +1,2927 @@
+The text is ReutersCorn-train.arff evaluet on the ReutersCorn-test.arff using meta.FilteredClassifier:
+1.with J48 and StringToVector filter inside.
+
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \"weka.core.tokenizers.WordTokenizer -delimiters \\\" \\\\r\\\\n\\\\t.,;:\\\\\\\'\\\\\\\"()?!\\\"\"" -S 1 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1
+Instances:    1554
+Attributes:   2
+              Text
+              class-att
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.25 -M 2 on data filtered through weka.filters.unsupervised.attribute.StringToWordVector -R 1 -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
+
+Filtered Header
+@relation 'Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"'
+
+@attribute class-att {0,1}
+@attribute &#3 numeric
+@attribute &lt numeric
+@attribute - numeric
+@attribute -- numeric
+@attribute 0 numeric
+@attribute 0/92 numeric
+@attribute 00 numeric
+@attribute 000 numeric
+@attribute 1 numeric
+@attribute 10 numeric
+@attribute 100 numeric
+@attribute 11 numeric
+@attribute 12 numeric
+@attribute 13 numeric
+@attribute 14 numeric
+@attribute 15 numeric
+@attribute 150 numeric
+@attribute 16 numeric
+@attribute 17 numeric
+@attribute 18 numeric
+@attribute 19 numeric
+@attribute 1985 numeric
+@attribute 1986 numeric
+@attribute 1986/87 numeric
+@attribute 1987 numeric
+@attribute 1988 numeric
+@attribute 1ST numeric
+@attribute 2 numeric
+@attribute 20 numeric
+@attribute 200 numeric
+@attribute 21 numeric
+@attribute 22 numeric
+@attribute 23 numeric
+@attribute 24 numeric
+@attribute 25 numeric
+@attribute 250 numeric
+@attribute 26 numeric
+@attribute 27 numeric
+@attribute 28 numeric
+@attribute 29 numeric
+@attribute 3 numeric
+@attribute 30 numeric
+@attribute 300 numeric
+@attribute 31 numeric
+@attribute 32 numeric
+@attribute 33 numeric
+@attribute 34 numeric
+@attribute 35 numeric
+@attribute 36 numeric
+@attribute 37 numeric
+@attribute 38 numeric
+@attribute 39 numeric
+@attribute 3RD numeric
+@attribute 4 numeric
+@attribute 40 numeric
+@attribute 400 numeric
+@attribute 41 numeric
+@attribute 42 numeric
+@attribute 43 numeric
+@attribute 44 numeric
+@attribute 45 numeric
+@attribute 46 numeric
+@attribute 47 numeric
+@attribute 48 numeric
+@attribute 49 numeric
+@attribute 4TH numeric
+@attribute 4th numeric
+@attribute 5 numeric
+@attribute 50 numeric
+@attribute 500 numeric
+@attribute 51 numeric
+@attribute 52 numeric
+@attribute 53 numeric
+@attribute 54 numeric
+@attribute 55 numeric
+@attribute 56 numeric
+@attribute 57 numeric
+@attribute 58 numeric
+@attribute 59 numeric
+@attribute 6 numeric
+@attribute 60 numeric
+@attribute 600 numeric
+@attribute 61 numeric
+@attribute 62 numeric
+@attribute 63 numeric
+@attribute 64 numeric
+@attribute 65 numeric
+@attribute 66 numeric
+@attribute 67 numeric
+@attribute 68 numeric
+@attribute 69 numeric
+@attribute 7 numeric
+@attribute 70 numeric
+@attribute 700 numeric
+@attribute 71 numeric
+@attribute 72 numeric
+@attribute 73 numeric
+@attribute 75 numeric
+@attribute 76 numeric
+@attribute 77 numeric
+@attribute 78 numeric
+@attribute 8 numeric
+@attribute 80 numeric
+@attribute 800 numeric
+@attribute 81 numeric
+@attribute 85 numeric
+@attribute 87 numeric
+@attribute 88 numeric
+@attribute 9 numeric
+@attribute 90 numeric
+@attribute 900 numeric
+@attribute 92 numeric
+@attribute 94 numeric
+@attribute 95 numeric
+@attribute 96 numeric
+@attribute 98 numeric
+@attribute A numeric
+@attribute AMERICAN numeric
+@attribute AND numeric
+@attribute AT numeric
+@attribute Agriculture numeric
+@attribute America numeric
+@attribute American numeric
+@attribute An numeric
+@attribute Analysts numeric
+@attribute April numeric
+@attribute Arabia numeric
+@attribute Association numeric
+@attribute At numeric
+@attribute Avg numeric
+@attribute B numeric
+@attribute BANK numeric
+@attribute BUYS numeric
+@attribute Baker numeric
+@attribute Bank numeric
+@attribute Board numeric
+@attribute Brazil numeric
+@attribute Brazilian numeric
+@attribute British numeric
+@attribute But numeric
+@attribute C numeric
+@attribute CANADA numeric
+@attribute CO numeric
+@attribute CORP numeric
+@attribute CTS numeric
+@attribute California numeric
+@attribute Canada numeric
+@attribute Canadian numeric
+@attribute Chairman numeric
+@attribute Chicago numeric
+@attribute China numeric
+@attribute Co numeric
+@attribute Coffee numeric
+@attribute Colombia numeric
+@attribute Commerce numeric
+@attribute Commission numeric
+@attribute Community numeric
+@attribute Company numeric
+@attribute Congress numeric
+@attribute Corp numeric
+@attribute Corp> numeric
+@attribute Council numeric
+@attribute DEC numeric
+@attribute DIVIDEND numeric
+@attribute DLRS numeric
+@attribute Dec numeric
+@attribute December numeric
+@attribute Department numeric
+@attribute Dome numeric
+@attribute Dutch numeric
+@attribute EC numeric
+@attribute Economic numeric
+@attribute Energy numeric
+@attribute England numeric
+@attribute Europe numeric
+@attribute European numeric
+@attribute Exchange numeric
+@attribute Express numeric
+@attribute F numeric
+@attribute FALL numeric
+@attribute FEBRUARY numeric
+@attribute FED numeric
+@attribute FOR numeric
+@attribute Feb numeric
+@attribute February numeric
+@attribute Fed numeric
+@attribute Federal numeric
+@attribute Finance numeric
+@attribute Financial numeric
+@attribute First numeric
+@attribute For numeric
+@attribute France numeric
+@attribute French numeric
+@attribute Friday numeric
+@attribute Fund numeric
+@attribute GATT numeric
+@attribute GROUP numeric
+@attribute General numeric
+@attribute German numeric
+@attribute Germany numeric
+@attribute Group numeric
+@attribute Gulf numeric
+@attribute He numeric
+@attribute Holdings numeric
+@attribute House numeric
+@attribute However numeric
+@attribute Hughes numeric
+@attribute Hutton numeric
+@attribute I numeric
+@attribute ICO numeric
+@attribute IN numeric
+@attribute INC numeric
+@attribute INC> numeric
+@attribute INDUSTRIES numeric
+@attribute INTERNATIONAL numeric
+@attribute Icahn numeric
+@attribute If numeric
+@attribute In numeric
+@attribute Inc numeric
+@attribute Inc> numeric
+@attribute Indonesia numeric
+@attribute Industries numeric
+@attribute Institute numeric
+@attribute International numeric
+@attribute It numeric
+@attribute JAN numeric
+@attribute JAPAN numeric
+@attribute Jan numeric
+@attribute January numeric
+@attribute Japan numeric
+@attribute Japanese numeric
+@attribute July numeric
+@attribute June numeric
+@attribute K numeric
+@attribute LOSS numeric
+@attribute Last numeric
+@attribute London numeric
+@attribute Ltd numeric
+@attribute Ltd> numeric
+@attribute M-1 numeric
+@attribute MARKET numeric
+@attribute MLN numeric
+@attribute MONEY numeric
+@attribute Management numeric
+@attribute March numeric
+@attribute May numeric
+@attribute Medical numeric
+@attribute Mines numeric
+@attribute Minister numeric
+@attribute Ministry numeric
+@attribute N numeric
+@attribute NET numeric
+@attribute NEW numeric
+@attribute NOTE numeric
+@attribute National numeric
+@attribute Net numeric
+@attribute New numeric
+@attribute Nine numeric
+@attribute North numeric
+@attribute Note numeric
+@attribute November numeric
+@attribute OF numeric
+@attribute OIL numeric
+@attribute ON numeric
+@attribute OPEC numeric
+@attribute October numeric
+@attribute Oil numeric
+@attribute On numeric
+@attribute One numeric
+@attribute Opec numeric
+@attribute Oper numeric
+@attribute PAYOUT numeric
+@attribute PCT numeric
+@attribute PRICES numeric
+@attribute Pacific numeric
+@attribute Pay numeric
+@attribute Pesch numeric
+@attribute Petroleum numeric
+@attribute Piedmont numeric
+@attribute President numeric
+@attribute Purolator numeric
+@attribute QTR numeric
+@attribute QUARTERLY numeric
+@attribute Qtly numeric
+@attribute RAISES numeric
+@attribute REUTER numeric
+@attribute RISE numeric
+@attribute Reagan numeric
+@attribute Record numeric
+@attribute Redstone numeric
+@attribute Reserve numeric
+@attribute Reuter numeric
+@attribute Reuters numeric
+@attribute Revs numeric
+@attribute S numeric
+@attribute SAYS numeric
+@attribute SEES numeric
+@attribute SELL numeric
+@attribute SETS numeric
+@attribute STAKE numeric
+@attribute STOCK numeric
+@attribute Sales numeric
+@attribute Saudi numeric
+@attribute Secretary numeric
+@attribute Securities numeric
+@attribute September numeric
+@attribute Shearson numeric
+@attribute Shr numeric
+@attribute Some numeric
+@attribute South numeric
+@attribute Southern numeric
+@attribute Soviet numeric
+@attribute State numeric
+@attribute States numeric
+@attribute Statistics numeric
+@attribute TALKS numeric
+@attribute TO numeric
+@attribute TRADE numeric
+@attribute TWA numeric
+@attribute Taiwan numeric
+@attribute Texas numeric
+@attribute That numeric
+@attribute The numeric
+@attribute There numeric
+@attribute They numeric
+@attribute This numeric
+@attribute Total numeric
+@attribute Trade numeric
+@attribute Treasury numeric
+@attribute U numeric
+@attribute UNIT numeric
+@attribute UP numeric
+@attribute USAir numeric
+@attribute USDA numeric
+@attribute Under numeric
+@attribute Union numeric
+@attribute United numeric
+@attribute Viacom numeric
+@attribute WHEAT numeric
+@attribute Wall numeric
+@attribute Washington numeric
+@attribute We numeric
+@attribute West numeric
+@attribute World numeric
+@attribute YEAR numeric
+@attribute Year numeric
+@attribute Yeutter numeric
+@attribute York numeric
+@attribute a numeric
+@attribute about numeric
+@attribute above numeric
+@attribute according numeric
+@attribute account numeric
+@attribute acquire numeric
+@attribute acquired numeric
+@attribute acquisition numeric
+@attribute action numeric
+@attribute added numeric
+@attribute additional numeric
+@attribute adjusted numeric
+@attribute administration numeric
+@attribute after numeric
+@attribute again numeric
+@attribute against numeric
+@attribute agency numeric
+@attribute ago numeric
+@attribute agreed numeric
+@attribute agreement numeric
+@attribute agreements numeric
+@attribute agricultural numeric
+@attribute all numeric
+@attribute allow numeric
+@attribute already numeric
+@attribute also numeric
+@attribute among numeric
+@attribute amount numeric
+@attribute an numeric
+@attribute analyst numeric
+@attribute analysts numeric
+@attribute and numeric
+@attribute announced numeric
+@attribute annual numeric
+@attribute another numeric
+@attribute any numeric
+@attribute approval numeric
+@attribute approved numeric
+@attribute are numeric
+@attribute areas numeric
+@attribute around numeric
+@attribute as numeric
+@attribute asked numeric
+@attribute assets numeric
+@attribute at numeric
+@attribute available numeric
+@attribute average numeric
+@attribute back numeric
+@attribute bags numeric
+@attribute balance numeric
+@attribute bank numeric
+@attribute banking numeric
+@attribute banks numeric
+@attribute barrel numeric
+@attribute barrels numeric
+@attribute base numeric
+@attribute based numeric
+@attribute basis numeric
+@attribute be numeric
+@attribute because numeric
+@attribute become numeric
+@attribute been numeric
+@attribute before numeric
+@attribute being numeric
+@attribute believe numeric
+@attribute below numeric
+@attribute better numeric
+@attribute between numeric
+@attribute bid numeric
+@attribute bill numeric
+@attribute billion numeric
+@attribute bills numeric
+@attribute board numeric
+@attribute bond numeric
+@attribute both numeric
+@attribute bought numeric
+@attribute bpd numeric
+@attribute budget numeric
+@attribute business numeric
+@attribute businesses numeric
+@attribute but numeric
+@attribute buy numeric
+@attribute buying numeric
+@attribute by numeric
+@attribute calendar numeric
+@attribute called numeric
+@attribute can numeric
+@attribute capital numeric
+@attribute cash numeric
+@attribute cause numeric
+@attribute caused numeric
+@attribute cent numeric
+@attribute central numeric
+@attribute cents numeric
+@attribute certain numeric
+@attribute certificates numeric
+@attribute chairman numeric
+@attribute change numeric
+@attribute changed numeric
+@attribute changes numeric
+@attribute charge numeric
+@attribute charges numeric
+@attribute chief numeric
+@attribute close numeric
+@attribute closed numeric
+@attribute coffee numeric
+@attribute combined numeric
+@attribute come numeric
+@attribute comment numeric
+@attribute commercial numeric
+@attribute committee numeric
+@attribute common numeric
+@attribute companies numeric
+@attribute company numeric
+@attribute compared numeric
+@attribute competitive numeric
+@attribute completed numeric
+@attribute conditions numeric
+@attribute conference numeric
+@attribute considering numeric
+@attribute consumer numeric
+@attribute continue numeric
+@attribute continued numeric
+@attribute contract numeric
+@attribute contracts numeric
+@attribute control numeric
+@attribute copper numeric
+@attribute cost numeric
+@attribute costs numeric
+@attribute could numeric
+@attribute council numeric
+@attribute countries numeric
+@attribute country numeric
+@attribute credit numeric
+@attribute credits numeric
+@attribute crop numeric
+@attribute crops numeric
+@attribute crowns numeric
+@attribute crude numeric
+@attribute ct numeric
+@attribute cts numeric
+@attribute currency numeric
+@attribute current numeric
+@attribute currently numeric
+@attribute cut numeric
+@attribute daily numeric
+@attribute data numeric
+@attribute day numeric
+@attribute days numeric
+@attribute de numeric
+@attribute deal numeric
+@attribute dealers numeric
+@attribute debt numeric
+@attribute decision numeric
+@attribute declared numeric
+@attribute decline numeric
+@attribute declined numeric
+@attribute deficit numeric
+@attribute delegates numeric
+@attribute demand numeric
+@attribute department numeric
+@attribute deposits numeric
+@attribute development numeric
+@attribute did numeric
+@attribute difficult numeric
+@attribute directors numeric
+@attribute discontinued numeric
+@attribute discount numeric
+@attribute distribution numeric
+@attribute div numeric
+@attribute dividend numeric
+@attribute division numeric
+@attribute dlr numeric
+@attribute dlrs numeric
+@attribute do numeric
+@attribute does numeric
+@attribute dollar numeric
+@attribute domestic numeric
+@attribute down numeric
+@attribute drop numeric
+@attribute due numeric
+@attribute during numeric
+@attribute each numeric
+@attribute earlier numeric
+@attribute early numeric
+@attribute earned numeric
+@attribute earnings numeric
+@attribute economic numeric
+@attribute economists numeric
+@attribute economy numeric
+@attribute effect numeric
+@attribute effective numeric
+@attribute effort numeric
+@attribute eight numeric
+@attribute end numeric
+@attribute ended numeric
+@attribute ending numeric
+@attribute energy numeric
+@attribute equal numeric
+@attribute equipment numeric
+@attribute equity numeric
+@attribute estimate numeric
+@attribute estimated numeric
+@attribute estimates numeric
+@attribute even numeric
+@attribute exchange numeric
+@attribute excludes numeric
+@attribute executive numeric
+@attribute expect numeric
+@attribute expected numeric
+@attribute expects numeric
+@attribute export numeric
+@attribute exports numeric
+@attribute extended numeric
+@attribute extraordinary numeric
+@attribute fall numeric
+@attribute far numeric
+@attribute farm numeric
+@attribute farmers numeric
+@attribute federal numeric
+@attribute fell numeric
+@attribute few numeric
+@attribute figures numeric
+@attribute filing numeric
+@attribute final numeric
+@attribute finance numeric
+@attribute financial numeric
+@attribute financing numeric
+@attribute firm numeric
+@attribute firms numeric
+@attribute first numeric
+@attribute fiscal numeric
+@attribute five numeric
+@attribute fixed numeric
+@attribute following numeric
+@attribute for numeric
+@attribute forecast numeric
+@attribute foreign numeric
+@attribute four numeric
+@attribute fourth numeric
+@attribute francs numeric
+@attribute from numeric
+@attribute full numeric
+@attribute funds numeric
+@attribute further numeric
+@attribute future numeric
+@attribute futures numeric
+@attribute gain numeric
+@attribute gains numeric
+@attribute gas numeric
+@attribute gave numeric
+@attribute general numeric
+@attribute get numeric
+@attribute give numeric
+@attribute given numeric
+@attribute go numeric
+@attribute going numeric
+@attribute gold numeric
+@attribute good numeric
+@attribute goods numeric
+@attribute government numeric
+@attribute grain numeric
+@attribute group numeric
+@attribute growth numeric
+@attribute guilders numeric
+@attribute had numeric
+@attribute half numeric
+@attribute has numeric
+@attribute have numeric
+@attribute he numeric
+@attribute held numeric
+@attribute help numeric
+@attribute here numeric
+@attribute high numeric
+@attribute higher numeric
+@attribute his numeric
+@attribute hit numeric
+@attribute hold numeric
+@attribute holders numeric
+@attribute holding numeric
+@attribute how numeric
+@attribute however numeric
+@attribute if numeric
+@attribute impact numeric
+@attribute import numeric
+@attribute imports numeric
+@attribute improved numeric
+@attribute in numeric
+@attribute include numeric
+@attribute included numeric
+@attribute includes numeric
+@attribute including numeric
+@attribute income numeric
+@attribute increase numeric
+@attribute increased numeric
+@attribute increases numeric
+@attribute index numeric
+@attribute industrial numeric
+@attribute industry numeric
+@attribute inflation numeric
+@attribute initial numeric
+@attribute interest numeric
+@attribute interests numeric
+@attribute international numeric
+@attribute into numeric
+@attribute investment numeric
+@attribute investors numeric
+@attribute is numeric
+@attribute issue numeric
+@attribute issued numeric
+@attribute issues numeric
+@attribute it numeric
+@attribute its numeric
+@attribute just numeric
+@attribute large numeric
+@attribute largest numeric
+@attribute last numeric
+@attribute late numeric
+@attribute later numeric
+@attribute latest numeric
+@attribute lead numeric
+@attribute least numeric
+@attribute led numeric
+@attribute legislation numeric
+@attribute less numeric
+@attribute level numeric
+@attribute levels numeric
+@attribute likely numeric
+@attribute line numeric
+@attribute little numeric
+@attribute loan numeric
+@attribute loans numeric
+@attribute long numeric
+@attribute long-term numeric
+@attribute loss numeric
+@attribute losses numeric
+@attribute low numeric
+@attribute lower numeric
+@attribute made numeric
+@attribute main numeric
+@attribute mainly numeric
+@attribute major numeric
+@attribute make numeric
+@attribute making numeric
+@attribute management numeric
+@attribute many numeric
+@attribute market numeric
+@attribute markets numeric
+@attribute marks numeric
+@attribute may numeric
+@attribute meet numeric
+@attribute meeting numeric
+@attribute member numeric
+@attribute members numeric
+@attribute merger numeric
+@attribute might numeric
+@attribute mln numeric
+@attribute money numeric
+@attribute month numeric
+@attribute months numeric
+@attribute more numeric
+@attribute most numeric
+@attribute move numeric
+@attribute mths numeric
+@attribute much numeric
+@attribute must numeric
+@attribute nations numeric
+@attribute near numeric
+@attribute need numeric
+@attribute needed numeric
+@attribute negotiations numeric
+@attribute net numeric
+@attribute new numeric
+@attribute news numeric
+@attribute next numeric
+@attribute nil numeric
+@attribute nine numeric
+@attribute no numeric
+@attribute not numeric
+@attribute noted numeric
+@attribute now numeric
+@attribute number numeric
+@attribute of numeric
+@attribute off numeric
+@attribute offer numeric
+@attribute offered numeric
+@attribute offering numeric
+@attribute official numeric
+@attribute officials numeric
+@attribute oil numeric
+@attribute on numeric
+@attribute one numeric
+@attribute only numeric
+@attribute open numeric
+@attribute operating numeric
+@attribute operation numeric
+@attribute operations numeric
+@attribute option numeric
+@attribute options numeric
+@attribute or numeric
+@attribute other numeric
+@attribute our numeric
+@attribute out numeric
+@attribute outlook numeric
+@attribute output numeric
+@attribute outstanding numeric
+@attribute over numeric
+@attribute own numeric
+@attribute owned numeric
+@attribute owns numeric
+@attribute pact numeric
+@attribute paid numeric
+@attribute part numeric
+@attribute past numeric
+@attribute pay numeric
+@attribute payable numeric
+@attribute payment numeric
+@attribute payments numeric
+@attribute pct numeric
+@attribute per numeric
+@attribute performance numeric
+@attribute period numeric
+@attribute periods numeric
+@attribute plan numeric
+@attribute plans numeric
+@attribute plant numeric
+@attribute point numeric
+@attribute policy numeric
+@attribute position numeric
+@attribute possible numeric
+@attribute potential numeric
+@attribute preferred numeric
+@attribute present numeric
+@attribute president numeric
+@attribute pressure numeric
+@attribute previous numeric
+@attribute previously numeric
+@attribute price numeric
+@attribute prices numeric
+@attribute prior numeric
+@attribute private numeric
+@attribute probably numeric
+@attribute problem numeric
+@attribute problems numeric
+@attribute proceeds numeric
+@attribute producer numeric
+@attribute producers numeric
+@attribute producing numeric
+@attribute product numeric
+@attribute production numeric
+@attribute products numeric
+@attribute profit numeric
+@attribute profits numeric
+@attribute program numeric
+@attribute property numeric
+@attribute proposal numeric
+@attribute proposals numeric
+@attribute proposed numeric
+@attribute provide numeric
+@attribute provided numeric
+@attribute provision numeric
+@attribute public numeric
+@attribute purchase numeric
+@attribute qtr numeric
+@attribute quarter numeric
+@attribute quarterly numeric
+@attribute quota numeric
+@attribute quotas numeric
+@attribute quoted numeric
+@attribute raise numeric
+@attribute raised numeric
+@attribute rate numeric
+@attribute rates numeric
+@attribute reached numeric
+@attribute real numeric
+@attribute receive numeric
+@attribute received numeric
+@attribute recent numeric
+@attribute recently numeric
+@attribute record numeric
+@attribute reduce numeric
+@attribute reduced numeric
+@attribute reduction numeric
+@attribute reflect numeric
+@attribute remain numeric
+@attribute remaining numeric
+@attribute report numeric
+@attribute reported numeric
+@attribute required numeric
+@attribute reserves numeric
+@attribute respectively numeric
+@attribute response numeric
+@attribute restructuring numeric
+@attribute result numeric
+@attribute results numeric
+@attribute return numeric
+@attribute revenues numeric
+@attribute review numeric
+@attribute revised numeric
+@attribute right numeric
+@attribute rights numeric
+@attribute rise numeric
+@attribute risk numeric
+@attribute rose numeric
+@attribute s numeric
+@attribute said numeric
+@attribute sale numeric
+@attribute sales numeric
+@attribute same numeric
+@attribute say numeric
+@attribute saying numeric
+@attribute scheduled numeric
+@attribute second numeric
+@attribute sector numeric
+@attribute securities numeric
+@attribute see numeric
+@attribute sell numeric
+@attribute selling numeric
+@attribute senior numeric
+@attribute service numeric
+@attribute services numeric
+@attribute set numeric
+@attribute settlement numeric
+@attribute seven numeric
+@attribute several numeric
+@attribute share numeric
+@attribute shareholder numeric
+@attribute shareholders numeric
+@attribute shares numeric
+@attribute sharp numeric
+@attribute sharply numeric
+@attribute shipment numeric
+@attribute short numeric
+@attribute shortage numeric
+@attribute should numeric
+@attribute show numeric
+@attribute showed numeric
+@attribute shr numeric
+@attribute shrs numeric
+@attribute signed numeric
+@attribute significant numeric
+@attribute since numeric
+@attribute situation numeric
+@attribute six numeric
+@attribute so numeric
+@attribute sold numeric
+@attribute some numeric
+@attribute sources numeric
+@attribute soybean numeric
+@attribute soybeans numeric
+@attribute special numeric
+@attribute spending numeric
+@attribute split numeric
+@attribute spokesman numeric
+@attribute spot numeric
+@attribute stake numeric
+@attribute start numeric
+@attribute state numeric
+@attribute statement numeric
+@attribute states numeric
+@attribute sterling numeric
+@attribute stg numeric
+@attribute still numeric
+@attribute stock numeric
+@attribute stocks numeric
+@attribute strong numeric
+@attribute study numeric
+@attribute subject numeric
+@attribute subsidiary numeric
+@attribute such numeric
+@attribute sugar numeric
+@attribute supply numeric
+@attribute support numeric
+@attribute surplus numeric
+@attribute system numeric
+@attribute t numeric
+@attribute take numeric
+@attribute taken numeric
+@attribute takeover numeric
+@attribute taking numeric
+@attribute talks numeric
+@attribute target numeric
+@attribute tax numeric
+@attribute tender numeric
+@attribute term numeric
+@attribute terms numeric
+@attribute than numeric
+@attribute that numeric
+@attribute the numeric
+@attribute their numeric
+@attribute them numeric
+@attribute then numeric
+@attribute there numeric
+@attribute these numeric
+@attribute they numeric
+@attribute think numeric
+@attribute third numeric
+@attribute this numeric
+@attribute those numeric
+@attribute three numeric
+@attribute through numeric
+@attribute time numeric
+@attribute to numeric
+@attribute today numeric
+@attribute told numeric
+@attribute tomorrow numeric
+@attribute tonne numeric
+@attribute tonnes numeric
+@attribute tons numeric
+@attribute too numeric
+@attribute total numeric
+@attribute trade numeric
+@attribute traders numeric
+@attribute trading numeric
+@attribute transaction numeric
+@attribute two numeric
+@attribute unchanged numeric
+@attribute under numeric
+@attribute undisclosed numeric
+@attribute unemployment numeric
+@attribute unit numeric
+@attribute until numeric
+@attribute up numeric
+@attribute use numeric
+@attribute used numeric
+@attribute value numeric
+@attribute versus numeric
+@attribute very numeric
+@attribute vs numeric
+@attribute want numeric
+@attribute was numeric
+@attribute way numeric
+@attribute we numeric
+@attribute week numeric
+@attribute weeks numeric
+@attribute well numeric
+@attribute were numeric
+@attribute what numeric
+@attribute wheat numeric
+@attribute when numeric
+@attribute whether numeric
+@attribute which numeric
+@attribute while numeric
+@attribute who numeric
+@attribute will numeric
+@attribute winter numeric
+@attribute with numeric
+@attribute within numeric
+@attribute without numeric
+@attribute work numeric
+@attribute workers numeric
+@attribute world numeric
+@attribute worth numeric
+@attribute would numeric
+@attribute writedown numeric
+@attribute year numeric
+@attribute years numeric
+@attribute yen numeric
+@attribute yesterday numeric
+@attribute yet numeric
+@attribute you numeric
+@attribute &#2 numeric
+@attribute --- numeric
+@attribute -Canada numeric
+@attribute -Soviet numeric
+@attribute -USSR numeric
+@attribute -not numeric
+@attribute /Canadian numeric
+@attribute /Phil numeric
+@attribute /USSR numeric
+@attribute 000-900 numeric
+@attribute 011 numeric
+@attribute 023 numeric
+@attribute 03 numeric
+@attribute 04 numeric
+@attribute 05 numeric
+@attribute 06 numeric
+@attribute 07 numeric
+@attribute 070 numeric
+@attribute 075 numeric
+@attribute 08 numeric
+@attribute 0900 numeric
+@attribute 1-15 numeric
+@attribute 10-year numeric
+@attribute 103 numeric
+@attribute 104 numeric
+@attribute 107 numeric
+@attribute 109 numeric
+@attribute 111 numeric
+@attribute 117 numeric
+@attribute 120 numeric
+@attribute 123 numeric
+@attribute 125 numeric
+@attribute 1315 numeric
+@attribute 133 numeric
+@attribute 134 numeric
+@attribute 136 numeric
+@attribute 137 numeric
+@attribute 138 numeric
+@attribute 140 numeric
+@attribute 141 numeric
+@attribute 142 numeric
+@attribute 145 numeric
+@attribute 147 numeric
+@attribute 149 numeric
+@attribute 15-30 numeric
+@attribute 151 numeric
+@attribute 153 numeric
+@attribute 155 numeric
+@attribute 157 numeric
+@attribute 158 numeric
+@attribute 161 numeric
+@attribute 164 numeric
+@attribute 166 numeric
+@attribute 172 numeric
+@attribute 178 numeric
+@attribute 182 numeric
+@attribute 191 numeric
+@attribute 194 numeric
+@attribute 198 numeric
+@attribute 1981 numeric
+@attribute 1983/84 numeric
+@attribute 1984 numeric
+@attribute 1985/86 numeric
+@attribute 1987/88 numeric
+@attribute 2-3/4 numeric
+@attribute 201 numeric
+@attribute 204 numeric
+@attribute 214 numeric
+@attribute 216 numeric
+@attribute 217 numeric
+@attribute 218 numeric
+@attribute 225 numeric
+@attribute 233 numeric
+@attribute 25-Y numeric
+@attribute 266 numeric
+@attribute 270 numeric
+@attribute 274 numeric
+@attribute 285 numeric
+@attribute 307 numeric
+@attribute 315 numeric
+@attribute 325 numeric
+@attribute 349 numeric
+@attribute 360 numeric
+@attribute 362 numeric
+@attribute 375 numeric
+@attribute 381 numeric
+@attribute 399 numeric
+@attribute 408 numeric
+@attribute 409 numeric
+@attribute 420 numeric
+@attribute 429 numeric
+@attribute 465 numeric
+@attribute 494 numeric
+@attribute 5/14/82 numeric
+@attribute 50-50 numeric
+@attribute 50/50 numeric
+@attribute 515 numeric
+@attribute 516 numeric
+@attribute 55-pct numeric
+@attribute 580 numeric
+@attribute 5c numeric
+@attribute 645 numeric
+@attribute 650 numeric
+@attribute 655 numeric
+@attribute 662 numeric
+@attribute 689 numeric
+@attribute 692 numeric
+@attribute 695 numeric
+@attribute 697 numeric
+@attribute 7/1/82 numeric
+@attribute 704 numeric
+@attribute 720 numeric
+@attribute 725 numeric
+@attribute 729 numeric
+@attribute 774 numeric
+@attribute 82 numeric
+@attribute 826 numeric
+@attribute 83 numeric
+@attribute 84 numeric
+@attribute 86 numeric
+@attribute 86/87 numeric
+@attribute 872 numeric
+@attribute 887 numeric
+@attribute 91 numeric
+@attribute 93 numeric
+@attribute 950 numeric
+@attribute 967 numeric
+@attribute 980 numeric
+@attribute 989 numeric
+@attribute 99 numeric
+@attribute ADDS numeric
+@attribute AFBF numeric
+@attribute AFRICA numeric
+@attribute AFTER numeric
+@attribute AGO numeric
+@attribute AGRICULTURE numeric
+@attribute AND/OR numeric
+@attribute ANIMAL numeric
+@attribute APRIL numeric
+@attribute ARGENTINE numeric
+@attribute ASCS numeric
+@attribute ATTACKS numeric
+@attribute AVERAGE numeric
+@attribute AWARDS numeric
+@attribute According numeric
+@attribute Administrator numeric
+@attribute Africa numeric
+@attribute African numeric
+@attribute Agreement numeric
+@attribute Agricultural numeric
+@attribute Aires numeric
+@attribute Albert numeric
+@attribute Algeria numeric
+@attribute All numeric
+@attribute Amarillo/ numeric
+@attribute Amarlo/ numeric
+@attribute Apparently numeric
+@attribute Apr numeric
+@attribute April/ numeric
+@attribute Argentina numeric
+@attribute Argentine numeric
+@attribute Around numeric
+@attribute Article numeric
+@attribute Assistant numeric
+@attribute August numeric
+@attribute August/July numeric
+@attribute Australia numeric
+@attribute Austria numeric
+@attribute Avge numeric
+@attribute BARLEY numeric
+@attribute BE numeric
+@attribute BIDS numeric
+@attribute BLAST numeric
+@attribute BONUS numeric
+@attribute BRAZIL numeric
+@attribute BRLY numeric
+@attribute BROADEN numeric
+@attribute BUMPER numeric
+@attribute BUSHELS numeric
+@attribute BUYING numeric
+@attribute BY numeric
+@attribute Balt/Nor/ numeric
+@attribute Baltimore/ numeric
+@attribute Barley numeric
+@attribute Belgium numeric
+@attribute Bernard numeric
+@attribute Between numeric
+@attribute Both numeric
+@attribute Brasilia numeric
+@attribute Bread numeric
+@attribute Budget numeric
+@attribute Buenos numeric
+@attribute Bureau numeric
+@attribute By numeric
+@attribute CANADIAN numeric
+@attribute CANCELS numeric
+@attribute CASH/CERTS numeric
+@attribute CBT numeric
+@attribute CCC numeric
+@attribute CEREAL numeric
+@attribute CERTS numeric
+@attribute CFTC numeric
+@attribute CHINA numeric
+@attribute COMMENTS numeric
+@attribute COMMITMENTS numeric
+@attribute CONTRACT numeric
+@attribute CORN numeric
+@attribute CORN/OATS numeric
+@attribute COULD numeric
+@attribute COUNTERVAIL numeric
+@attribute CREDITS numeric
+@attribute CROPS numeric
+@attribute CST numeric
+@attribute CUTTING numeric
+@attribute CWT numeric
+@attribute Call numeric
+@attribute Canary numeric
+@attribute Cebeco-Handelsraad numeric
+@attribute Cereals numeric
+@attribute Ceuta numeric
+@attribute Chaco numeric
+@attribute Charles numeric
+@attribute Chinese numeric
+@attribute Cinci numeric
+@attribute Cincinnati numeric
+@attribute Citruspulp numeric
+@attribute City numeric
+@attribute Clayton numeric
+@attribute Combined numeric
+@attribute Commodity numeric
+@attribute Companies numeric
+@attribute Consequently numeric
+@attribute Conservation numeric
+@attribute Constraints numeric
+@attribute Continental numeric
+@attribute Contract numeric
+@attribute Cordoba numeric
+@attribute Corn numeric
+@attribute Cornglutenfeed numeric
+@attribute Corporation numeric
+@attribute Corrientes numeric
+@attribute Credit numeric
+@attribute Currently numeric
+@attribute Cwt numeric
+@attribute DECISION numeric
+@attribute DEFICIENCY numeric
+@attribute DELIVERIES numeric
+@attribute DESTINATIONS numeric
+@attribute DETAIL numeric
+@attribute DETAILED numeric
+@attribute DETAILS numeric
+@attribute DISAPPOINTED numeric
+@attribute DOWN numeric
+@attribute DUE numeric
+@attribute DURUM numeric
+@attribute DUTCH numeric
+@attribute DUTY numeric
+@attribute Darwin numeric
+@attribute Dean numeric
+@attribute Deficiency numeric
+@attribute Delivery numeric
+@attribute Denver numeric
+@attribute Deputy numeric
+@attribute Despite numeric
+@attribute Director numeric
+@attribute Dlrs numeric
+@attribute Dlrs/Bu-Sorghum numeric
+@attribute Domestic numeric
+@attribute Duluth numeric
+@attribute During numeric
+@attribute E numeric
+@attribute EEP numeric
+@attribute ESTIMATE numeric
+@attribute ESTIMATED numeric
+@attribute EXPECTED numeric
+@attribute EXPORT numeric
+@attribute EXPORTERS numeric
+@attribute EXPORTS numeric
+@attribute Ecu numeric
+@attribute Ecus numeric
+@attribute Egypt numeric
+@attribute Eligible numeric
+@attribute Embassy numeric
+@attribute Entre numeric
+@attribute Estimated numeric
+@attribute Evansville numeric
+@attribute Evnsvlle numeric
+@attribute Export numeric
+@attribute FARM numeric
+@attribute FARMER-OWNED numeric
+@attribute FARMERS numeric
+@attribute FEED numeric
+@attribute FEEDGRAINS numeric
+@attribute FIRST numeric
+@attribute FREE numeric
+@attribute FRENCH numeric
+@attribute FROM numeric
+@attribute Farm numeric
+@attribute Farmers numeric
+@attribute Fe numeric
+@attribute Federation numeric
+@attribute Feedgrains numeric
+@attribute Formosa numeric
+@attribute Futures numeric
+@attribute GRAIN numeric
+@attribute GRAIN/OILSEED numeric
+@attribute GROWERS numeric
+@attribute GROWTH numeric
+@attribute Garlem numeric
+@attribute Grain numeric
+@attribute Grains numeric
+@attribute Gramm-Rudman numeric
+@attribute Grassley numeric
+@attribute Growers numeric
+@attribute Growth numeric
+@attribute HALF numeric
+@attribute HALT numeric
+@attribute HARARE numeric
+@attribute HARVEST numeric
+@attribute HELP numeric
+@attribute HF numeric
+@attribute HFCS numeric
+@attribute HFCS-55 numeric
+@attribute HONDURAS numeric
+@attribute HRS numeric
+@attribute HRW numeric
+@attribute Hall numeric
+@attribute Henderson numeric
+@attribute Honduras numeric
+@attribute How numeric
+@attribute II numeric
+@attribute III numeric
+@attribute IMPORT numeric
+@attribute IMPORTS numeric
+@attribute INDONESIAN numeric
+@attribute INJURING numeric
+@attribute INJURY numeric
+@attribute INSPECTIONS numeric
+@attribute ISRAEL numeric
+@attribute IV numeric
+@attribute Ill numeric
+@attribute Import numeric
+@attribute Index numeric
+@attribute Intervention numeric
+@attribute Iowa numeric
+@attribute Iraq numeric
+@attribute Iris numeric
+@attribute Is numeric
+@attribute Islands numeric
+@attribute Israel numeric
+@attribute Italy numeric
+@attribute January/March numeric
+@attribute Jul numeric
+@attribute July/June numeric
+@attribute Jun numeric
+@attribute KC numeric
+@attribute Kansas numeric
+@attribute Kleckner numeric
+@attribute Korea numeric
+@attribute L numeric
+@attribute LA numeric
+@attribute LICENCES numeric
+@attribute LIKELY numeric
+@attribute LOWER numeric
+@attribute LYNG numeric
+@attribute La numeric
+@attribute Lanka numeric
+@attribute Level numeric
+@attribute Licences numeric
+@attribute Lichtenstein numeric
+@attribute Linoil numeric
+@attribute Linseed numeric
+@attribute Lo numeric
+@attribute Loan numeric
+@attribute Lou numeric
+@attribute Louis numeric
+@attribute Lubbck numeric
+@attribute Lubbock numeric
+@attribute Luis numeric
+@attribute Lyng numeric
+@attribute MAIZE numeric
+@attribute MAr numeric
+@attribute MGE numeric
+@attribute MORE numeric
+@attribute Main numeric
+@attribute Maize numeric
+@attribute Major numeric
+@attribute Mar numeric
+@attribute Market numeric
+@attribute Marketing numeric
+@attribute Markets numeric
+@attribute Meanwhile numeric
+@attribute Melilla numeric
+@attribute Melnikov numeric
+@attribute Memphis numeric
+@attribute Mexico numeric
+@attribute Mike numeric
+@attribute Minneapolis numeric
+@attribute Misiones numeric
+@attribute Monday numeric
+@attribute Months numeric
+@attribute Morocco numeric
+@attribute Moscow numeric
+@attribute Mpls numeric
+@attribute NATIONAL numeric
+@attribute NAWG numeric
+@attribute Natl numeric
+@attribute Netherlands numeric
+@attribute No numeric
+@attribute Norf numeric
+@attribute OATS numeric
+@attribute OFFER numeric
+@attribute OMB numeric
+@attribute ONIC numeric
+@attribute OPENS numeric
+@attribute Oats numeric
+@attribute Oct numeric
+@attribute Oct-Sept numeric
+@attribute Office numeric
+@attribute Official numeric
+@attribute Oilseed numeric
+@attribute Only numeric
+@attribute Ontario numeric
+@attribute Ottawa numeric
+@attribute PARIS numeric
+@attribute PASSES numeric
+@attribute PAYMENT numeric
+@attribute PAYMENTS numeric
+@attribute PIK numeric
+@attribute PLANNING numeric
+@attribute PRICE numeric
+@attribute PRODUCERS numeric
+@attribute PROGRAMS numeric
+@attribute Palm numeric
+@attribute Pampa numeric
+@attribute Pat numeric
+@attribute Peavey numeric
+@attribute Peoria numeric
+@attribute Phil numeric
+@attribute Poland numeric
+@attribute Polish numeric
+@attribute Port/ numeric
+@attribute Portland/ numeric
+@attribute Price numeric
+@attribute Producers numeric
+@attribute Production numeric
+@attribute R-Iowa numeric
+@attribute RAINS numeric
+@attribute REBATE numeric
+@attribute REDUCED-USDA numeric
+@attribute REGISTRATIONS numeric
+@attribute RELIEF numeric
+@attribute REPORT numeric
+@attribute REPORTS numeric
+@attribute REQUESTS numeric
+@attribute RESERVE numeric
+@attribute RESULT numeric
+@attribute RETENDER numeric
+@attribute RISING numeric
+@attribute ROUEN numeric
+@attribute RULES numeric
+@attribute RULING numeric
+@attribute RYE numeric
+@attribute Rainfall numeric
+@attribute Rapeseed numeric
+@attribute Rate-X numeric
+@attribute Rates numeric
+@attribute Rebates numeric
+@attribute Release numeric
+@attribute Report numeric
+@attribute Requests numeric
+@attribute Resende numeric
+@attribute Reserves numeric
+@attribute Revenue numeric
+@attribute Richard numeric
+@attribute Rios numeric
+@attribute Rouen numeric
+@attribute SAID numeric
+@attribute SALES numeric
+@attribute SEASON numeric
+@attribute SEEN numeric
+@attribute SLOW numeric
+@attribute SOLD numeric
+@attribute SORG numeric
+@attribute SORGHUM numeric
+@attribute SOUTH numeric
+@attribute SOVIET numeric
+@attribute SOYB numeric
+@attribute SOYBEANS numeric
+@attribute SOYMEAL numeric
+@attribute SPECIAL numeric
+@attribute SRW numeric
+@attribute START numeric
+@attribute STOCKS numeric
+@attribute SUBPRODUCTS numeric
+@attribute SUSPENDS numeric
+@attribute SWITCHED numeric
+@attribute SWW numeric
+@attribute San numeric
+@attribute Santa numeric
+@attribute Seattle numeric
+@attribute Sen numeric
+@attribute September-January numeric
+@attribute Service numeric
+@attribute Several numeric
+@attribute Since numeric
+@attribute Slightly numeric
+@attribute Sorghum numeric
+@attribute Soviets numeric
+@attribute Soybean numeric
+@attribute Spain numeric
+@attribute Sri numeric
+@attribute St numeric
+@attribute Stabilization numeric
+@attribute Stockton numeric
+@attribute Stolte numeric
+@attribute Sub-Saharan numeric
+@attribute Sunflower numeric
+@attribute Sunflowerseed numeric
+@attribute Sunoil numeric
+@attribute Supply numeric
+@attribute Switzerland numeric
+@attribute TAIWAN numeric
+@attribute TENDER numeric
+@attribute TENDERS numeric
+@attribute TERMINAL numeric
+@attribute THIS numeric
+@attribute THOUS numeric
+@attribute THROUGH numeric
+@attribute TIED numeric
+@attribute TONIGHT numeric
+@attribute TONNES numeric
+@attribute TORRENTIAL numeric
+@attribute TRADERS numeric
+@attribute Tapioca numeric
+@attribute Tex numeric
+@attribute Thailand numeric
+@attribute Thursday numeric
+@attribute Toledo numeric
+@attribute Tom numeric
+@attribute Torrential numeric
+@attribute Track numeric
+@attribute Trading numeric
+@attribute Tribunal numeric
+@attribute Tuesday numeric
+@attribute Two numeric
+@attribute UNCHANGED numeric
+@attribute UNION numeric
+@attribute UNJUSTIFIED numeric
+@attribute UNKNOWN numeric
+@attribute UNLIKELY numeric
+@attribute UPHOLDS numeric
+@attribute USAGE numeric
+@attribute USSR numeric
+@attribute V numeric
+@attribute VALUES numeric
+@attribute VI numeric
+@attribute VOLUME numeric
+@attribute Vegetable numeric
+@attribute Venezuela numeric
+@attribute Vieux numeric
+@attribute WANT numeric
+@attribute WEEK numeric
+@attribute WHITE numeric
+@attribute WILL numeric
+@attribute WORRYING numeric
+@attribute Wheat numeric
+@attribute When numeric
+@attribute Whether numeric
+@attribute Worldwide numeric
+@attribute X numeric
+@attribute X-1986 numeric
+@attribute Y-dlrs numeric
+@attribute YEUTTER numeric
+@attribute ZIMBABWE numeric
+@attribute Zimbabwe numeric
+@attribute abundant numeric
+@attribute accepted numeric
+@attribute accordance numeric
+@attribute accumulated numeric
+@attribute accused numeric
+@attribute acreage numeric
+@attribute act numeric
+@attribute actions numeric
+@attribute active numeric
+@attribute actively numeric
+@attribute activity numeric
+@attribute actually numeric
+@attribute adding numeric
+@attribute adherence numeric
+@attribute advance numeric
+@attribute advanced numeric
+@attribute affected numeric
+@attribute agent numeric
+@attribute agriculture numeric
+@attribute agrument numeric
+@attribute ahead numeric
+@attribute aid numeric
+@attribute aide numeric
+@attribute allowed numeric
+@attribute and/or numeric
+@attribute animal numeric
+@attribute announce numeric
+@attribute apparently numeric
+@attribute appeared numeric
+@attribute apply numeric
+@attribute appropriate numeric
+@attribute approves numeric
+@attribute area numeric
+@attribute argument numeric
+@attribute association numeric
+@attribute attack numeric
+@attribute attempting numeric
+@attribute awarded numeric
+@attribute awarding numeric
+@attribute bales numeric
+@attribute ban numeric
+@attribute barley numeric
+@attribute barriers numeric
+@attribute bases numeric
+@attribute basic numeric
+@attribute beans numeric
+@attribute began numeric
+@attribute begin numeric
+@attribute beginning numeric
+@attribute begins numeric
+@attribute behind numeric
+@attribute believed numeric
+@attribute believes numeric
+@attribute benefit numeric
+@attribute benefited numeric
+@attribute benefits numeric
+@attribute beverage numeric
+@attribute beverages numeric
+@attribute bids numeric
+@attribute bonus numeric
+@attribute bottlers numeric
+@attribute brackets numeric
+@attribute bread numeric
+@attribute bread-making numeric
+@attribute bring numeric
+@attribute brought numeric
+@attribute brown numeric
+@attribute bumper numeric
+@attribute bushel numeric
+@attribute butter numeric
+@attribute buyers numeric
+@attribute c numeric
+@attribute cake numeric
+@attribute calculated numeric
+@attribute cancelled numeric
+@attribute carefully numeric
+@attribute cargo numeric
+@attribute carryover numeric
+@attribute case numeric
+@attribute cash/certs numeric
+@attribute causing numeric
+@attribute caving numeric
+@attribute cereal numeric
+@attribute cereals numeric
+@attribute certificate numeric
+@attribute certify numeric
+@attribute certs numeric
+@attribute challenge numeric
+@attribute changing numeric
+@attribute citruspulp numeric
+@attribute clearly numeric
+@attribute cleary numeric
+@attribute climate numeric
+@attribute closely numeric
+@attribute co-operative numeric
+@attribute coarse numeric
+@attribute comments numeric
+@attribute commitment numeric
+@attribute commitments numeric
+@attribute commodities numeric
+@attribute commodity numeric
+@attribute commonly numeric
+@attribute commun numeric
+@attribute community numeric
+@attribute compares numeric
+@attribute compensation numeric
+@attribute competition numeric
+@attribute competitively numeric
+@attribute competitor numeric
+@attribute complained numeric
+@attribute complaint numeric
+@attribute compliance numeric
+@attribute comprised numeric
+@attribute comprising numeric
+@attribute computer numeric
+@attribute concessions numeric
+@attribute condition numeric
+@attribute confirmed numeric
+@attribute conservation numeric
+@attribute consider numeric
+@attribute consumption numeric
+@attribute contended numeric
+@attribute context numeric
+@attribute continues numeric
+@attribute contrast numeric
+@attribute copra numeric
+@attribute corn numeric
+@attribute corn/sorghum numeric
+@attribute cornfeedmeal numeric
+@attribute correspond numeric
+@attribute corresponding numeric
+@attribute cotton numeric
+@attribute countervailing numeric
+@attribute county numeric
+@attribute cover numeric
+@attribute coverage numeric
+@attribute covering numeric
+@attribute covers numeric
+@attribute create numeric
+@attribute creates numeric
+@attribute critical numeric
+@attribute cropland numeric
+@attribute crushing numeric
+@attribute damage numeric
+@attribute dangerous numeric
+@attribute deadline numeric
+@attribute decide numeric
+@attribute decided numeric
+@attribute declines numeric
+@attribute declining numeric
+@attribute decreased numeric
+@attribute deficiency numeric
+@attribute definite numeric
+@attribute definition numeric
+@attribute delayed numeric
+@attribute deliveries numeric
+@attribute delivery numeric
+@attribute demands numeric
+@attribute depending numeric
+@attribute depends numeric
+@attribute deputy numeric
+@attribute derived numeric
+@attribute designated numeric
+@attribute destinations numeric
+@attribute detailed numeric
+@attribute detailing numeric
+@attribute details numeric
+@attribute determination numeric
+@attribute determine numeric
+@attribute devaluation numeric
+@attribute difference numeric
+@attribute different numeric
+@attribute disappointed numeric
+@attribute disappointment numeric
+@attribute disease numeric
+@attribute displacing numeric
+@attribute dispute numeric
+@attribute dollars numeric
+@attribute done numeric
+@attribute doubled numeric
+@attribute doubtful numeric
+@attribute dramatic numeric
+@attribute drawdown numeric
+@attribute drinks numeric
+@attribute driven numeric
+@attribute driving numeric
+@attribute droit numeric
+@attribute dropped numeric
+@attribute droughts numeric
+@attribute dry numeric
+@attribute duty numeric
+@attribute earmarked numeric
+@attribute edible numeric
+@attribute eep numeric
+@attribute eligibility numeric
+@attribute eligible numeric
+@attribute embassy numeric
+@attribute encouraged numeric
+@attribute enhancement numeric
+@attribute enrolled numeric
+@attribute ensure numeric
+@attribute entered numeric
+@attribute entire numeric
+@attribute entirely numeric
+@attribute equaled numeric
+@attribute equivalent numeric
+@attribute erodible numeric
+@attribute established numeric
+@attribute evaluate numeric
+@attribute examine numeric
+@attribute exceed numeric
+@attribute excellent numeric
+@attribute exemption numeric
+@attribute exerting numeric
+@attribute exist numeric
+@attribute exportable numeric
+@attribute exported numeric
+@attribute exporters numeric
+@attribute extend numeric
+@attribute f numeric
+@attribute facilities numeric
+@attribute facing numeric
+@attribute fact numeric
+@attribute facts numeric
+@attribute failed numeric
+@attribute failing numeric
+@attribute falling numeric
+@attribute farmer numeric
+@attribute farmer-owned numeric
+@attribute farrmers numeric
+@attribute faster numeric
+@attribute fault numeric
+@attribute favor numeric
+@attribute feed numeric
+@attribute feedgrain numeric
+@attribute feedgrains numeric
+@attribute fertile numeric
+@attribute figure numeric
+@attribute finding numeric
+@attribute five-day numeric
+@attribute five-month numeric
+@attribute flour numeric
+@attribute fluctuation numeric
+@attribute follow numeric
+@attribute follows numeric
+@attribute food numeric
+@attribute forced numeric
+@attribute forecasts numeric
+@attribute forward numeric
+@attribute free numeric
+@attribute fresh numeric
+@attribute frosts numeric
+@attribute fructose numeric
+@attribute fulfill numeric
+@attribute futurE numeric
+@attribute gained numeric
+@attribute generally numeric
+@attribute generic numeric
+@attribute giving numeric
+@attribute gluten numeric
+@attribute got numeric
+@attribute grade numeric
+@attribute grain-producing numeric
+@attribute grains numeric
+@attribute grant numeric
+@attribute granted numeric
+@attribute great numeric
+@attribute groups numeric
+@attribute grow numeric
+@attribute growers numeric
+@attribute grown numeric
+@attribute guarantee numeric
+@attribute guarantees numeric
+@attribute halt numeric
+@attribute hands numeric
+@attribute harvest numeric
+@attribute harvested numeric
+@attribute harvesting numeric
+@attribute harvests numeric
+@attribute heat numeric
+@attribute heaviest numeric
+@attribute hectares numeric
+@attribute helped numeric
+@attribute helpful numeric
+@attribute highest numeric
+@attribute historic numeric
+@attribute history numeric
+@attribute hope numeric
+@attribute hoppers numeric
+@attribute houses numeric
+@attribute hundred numeric
+@attribute hurting numeric
+@attribute ignored numeric
+@attribute implementing numeric
+@attribute important numeric
+@attribute importation numeric
+@attribute imported numeric
+@attribute importers numeric
+@attribute imposed numeric
+@attribute in-kind numeric
+@attribute inadvertantly numeric
+@attribute inched numeric
+@attribute incomprehensible numeric
+@attribute inconceivable numeric
+@attribute indicate numeric
+@attribute indicated numeric
+@attribute indications numeric
+@attribute industries numeric
+@attribute influence numeric
+@attribute injure numeric
+@attribute injured numeric
+@attribute injuring numeric
+@attribute injurious numeric
+@attribute injury numeric
+@attribute insect numeric
+@attribute insecticides numeric
+@attribute insignificant numeric
+@attribute insufficient numeric
+@attribute interested numeric
+@attribute intervention numeric
+@attribute interview numeric
+@attribute involved numeric
+@attribute joint numeric
+@attribute journalists numeric
+@attribute keen numeric
+@attribute kernels numeric
+@attribute known numeric
+@attribute lack numeric
+@attribute lacking numeric
+@attribute land numeric
+@attribute largely numeric
+@attribute larger numeric
+@attribute launched numeric
+@attribute law numeric
+@attribute lbs numeric
+@attribute left numeric
+@attribute letter numeric
+@attribute liberalize numeric
+@attribute licences numeric
+@attribute limited numeric
+@attribute list numeric
+@attribute lived numeric
+@attribute loaded numeric
+@attribute lobbyist numeric
+@attribute local numeric
+@attribute look numeric
+@attribute lose numeric
+@attribute losing numeric
+@attribute lots numeric
+@attribute lower-yielding numeric
+@attribute lowered numeric
+@attribute lowest numeric
+@attribute mailed numeric
+@attribute maize numeric
+@attribute markedly numeric
+@attribute marketing numeric
+@attribute materially numeric
+@attribute matured numeric
+@attribute maximum numeric
+@attribute meal numeric
+@attribute mean numeric
+@attribute measure numeric
+@attribute measured numeric
+@attribute met numeric
+@attribute mid-1960s numeric
+@attribute mid-month numeric
+@attribute millers numeric
+@attribute milling numeric
+@attribute million numeric
+@attribute minimum numeric
+@attribute ministry numeric
+@attribute minus numeric
+@attribute mm numeric
+@attribute modest numeric
+@attribute moving numeric
+@attribute multilateral numeric
+@attribute mutual numeric
+@attribute n numeric
+@attribute national numeric
+@attribute near-term numeric
+@attribute nearly numeric
+@attribute negative numeric
+@attribute negatively numeric
+@attribute newsletter numeric
+@attribute non-EC numeric
+@attribute normal numeric
+@attribute northwest numeric
+@attribute oats numeric
+@attribute obligations numeric
+@attribute offices numeric
+@attribute officially numeric
+@attribute offset numeric
+@attribute oilseeds numeric
+@attribute ongoing numeric
+@attribute onward numeric
+@attribute opened numeric
+@attribute operators numeric
+@attribute optimistic numeric
+@attribute ordered numeric
+@attribute outbreak numeric
+@attribute outcome numeric
+@attribute outlets numeric
+@attribute overall numeric
+@attribute overnight numeric
+@attribute palm numeric
+@attribute paralysed numeric
+@attribute partially numeric
+@attribute particularly numeric
+@attribute passed numeric
+@attribute pasta numeric
+@attribute people numeric
+@attribute perceived numeric
+@attribute permitted numeric
+@attribute pests numeric
+@attribute pick-up numeric
+@attribute planted numeric
+@attribute planting numeric
+@attribute plantings numeric
+@attribute plywood numeric
+@attribute policies numeric
+@attribute political numeric
+@attribute poor numeric
+@attribute port numeric
+@attribute portion numeric
+@attribute potentials numeric
+@attribute pound numeric
+@attribute pre-fixed numeric
+@attribute precedent numeric
+@attribute preceding numeric
+@attribute prefixed numeric
+@attribute pressures numeric
+@attribute prev numeric
+@attribute prevailing numeric
+@attribute priced numeric
+@attribute process numeric
+@attribute processors numeric
+@attribute programs numeric
+@attribute promising numeric
+@attribute prospects numeric
+@attribute protectionism numeric
+@attribute protectionist numeric
+@attribute proved numeric
+@attribute province numeric
+@attribute purchase/sale numeric
+@attribute purchasers numeric
+@attribute purchases numeric
+@attribute purchases/sales numeric
+@attribute put numeric
+@attribute quantities numeric
+@attribute quarters numeric
+@attribute quite numeric
+@attribute rain numeric
+@attribute rains numeric
+@attribute ranged numeric
+@attribute rapeseed numeric
+@attribute rash numeric
+@attribute ratio numeric
+@attribute re-emergence numeric
+@attribute reach numeric
+@attribute ready numeric
+@attribute reasonable numeric
+@attribute reasonably numeric
+@attribute rebate numeric
+@attribute rebates numeric
+@attribute recorded numeric
+@attribute redemption numeric
+@attribute reduces numeric
+@attribute reducing numeric
+@attribute reductions numeric
+@attribute referring numeric
+@attribute reflects numeric
+@attribute reform numeric
+@attribute registered numeric
+@attribute registrations numeric
+@attribute rejected numeric
+@attribute relationship numeric
+@attribute relatively numeric
+@attribute reluctance numeric
+@attribute renew numeric
+@attribute reporting numeric
+@attribute reports numeric
+@attribute represent numeric
+@attribute representative numeric
+@attribute representatives numeric
+@attribute requested numeric
+@attribute requesting numeric
+@attribute requests numeric
+@attribute rescheduled numeric
+@attribute reserve numeric
+@attribute resistant numeric
+@attribute resisted numeric
+@attribute responses numeric
+@attribute responsible numeric
+@attribute restitution numeric
+@attribute restrict numeric
+@attribute retender numeric
+@attribute retroactive numeric
+@attribute revenue numeric
+@attribute revise numeric
+@attribute rice numeric
+@attribute rising numeric
+@attribute round numeric
+@attribute rounnd numeric
+@attribute rubber numeric
+@attribute ruled numeric
+@attribute ruling numeric
+@attribute running numeric
+@attribute rupiah numeric
+@attribute says numeric
+@attribute scale numeric
+@attribute season numeric
+@attribute sectors numeric
+@attribute seeds numeric
+@attribute seller numeric
+@attribute sense numeric
+@attribute severe numeric
+@attribute shift numeric
+@attribute shipments numeric
+@attribute shipped numeric
+@attribute shipping numeric
+@attribute ships numeric
+@attribute showing numeric
+@attribute significantly numeric
+@attribute signing numeric
+@attribute signup numeric
+@attribute similar numeric
+@attribute size numeric
+@attribute slapped numeric
+@attribute slight numeric
+@attribute slightly numeric
+@attribute slipped numeric
+@attribute slowly numeric
+@attribute slump numeric
+@attribute small numeric
+@attribute soft numeric
+@attribute solid numeric
+@attribute sorghum numeric
+@attribute soybean-planted numeric
+@attribute soymeal numeric
+@attribute specialists numeric
+@attribute spokesperson numeric
+@attribute stabilization numeric
+@attribute stage numeric
+@attribute stagnates numeric
+@attribute stands numeric
+@attribute staple numeric
+@attribute stated numeric
+@attribute steady numeric
+@attribute step numeric
+@attribute steps numeric
+@attribute stimulated numeric
+@attribute stonnes numeric
+@attribute stop numeric
+@attribute storage numeric
+@attribute story numeric
+@attribute strain numeric
+@attribute stress numeric
+@attribute submitted numeric
+@attribute subproducts numeric
+@attribute subsidies numeric
+@attribute subsidized numeric
+@attribute subsidy numeric
+@attribute substantial numeric
+@attribute sugarcane numeric
+@attribute sunflower numeric
+@attribute sunflowers numeric
+@attribute sunmeal numeric
+@attribute supplies numeric
+@attribute supported numeric
+@attribute surprised numeric
+@attribute suspended numeric
+@attribute suspension numeric
+@attribute sweetener numeric
+@attribute sweetening numeric
+@attribute switched numeric
+@attribute symbol numeric
+@attribute syrup numeric
+@attribute tank numeric
+@attribute tea numeric
+@attribute tell numeric
+@attribute temperatures numeric
+@attribute ten numeric
+@attribute tenders numeric
+@attribute testified numeric
+@attribute therefore numeric
+@attribute though numeric
+@attribute thousands numeric
+@attribute threaten numeric
+@attribute three-quarter numeric
+@attribute throughout numeric
+@attribute thus numeric
+@attribute tide numeric
+@attribute times numeric
+@attribute tones numeric
+@attribute totalled numeric
+@attribute totalling numeric
+@attribute totally numeric
+@attribute traded numeric
+@attribute transactions numeric
+@attribute tribunal numeric
+@attribute tripled numeric
+@attribute truck numeric
+@attribute types numeric
+@attribute underlines numeric
+@attribute undertaken numeric
+@attribute unexpected numeric
+@attribute unfair numeric
+@attribute unfairly numeric
+@attribute units numeric
+@attribute unjustified numeric
+@attribute unknown numeric
+@attribute unwilling numeric
+@attribute upcoming numeric
+@attribute upheld numeric
+@attribute upset numeric
+@attribute upward numeric
+@attribute urged numeric
+@attribute us numeric
+@attribute usage numeric
+@attribute users numeric
+@attribute utilize numeric
+@attribute values numeric
+@attribute varieties numeric
+@attribute various numeric
+@attribute via numeric
+@attribute view numeric
+@attribute virtually numeric
+@attribute volume numeric
+@attribute von numeric
+@attribute wanted numeric
+@attribute weekly numeric
+@attribute weight numeric
+@attribute weighted numeric
+@attribute went numeric
+@attribute wereng numeric
+@attribute western numeric
+@attribute wet numeric
+@attribute wheat/barley numeric
+@attribute white numeric
+@attribute whole numeric
+@attribute willingness numeric
+@attribute won numeric
+@attribute worrying numeric
+@attribute year-ago numeric
+@attribute yellow numeric
+@attribute yields numeric
+@attribute zero numeric
+@attribute zone numeric
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+corn <= 0
+|   1986/87 <= 0
+|   |   tonne <= 0
+|   |   |   Agriculture <= 0: 0 (1435.0/6.0)
+|   |   |   Agriculture > 0
+|   |   |   |   3 <= 0
+|   |   |   |   |   rose <= 0: 0 (35.0)
+|   |   |   |   |   rose > 0: 1 (2.0)
+|   |   |   |   3 > 0: 1 (2.0)
+|   |   tonne > 0
+|   |   |   maize <= 0: 0 (22.0)
+|   |   |   maize > 0: 1 (5.0)
+|   1986/87 > 0
+|   |   maize <= 0
+|   |   |   the <= 0: 1 (2.0)
+|   |   |   the > 0: 0 (20.0)
+|   |   maize > 0: 1 (4.0)
+corn > 0
+|   planted <= 0: 1 (25.0/1.0)
+|   planted > 0: 0 (2.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	21
+
+
+Time taken to build model: 7.11 seconds
+
+=== Predictions on test set ===
+
+    inst#     actual  predicted error prediction
+        1        1:0        1:0       0.996 
+        2        1:0        1:0       0.996 
+        3        1:0        1:0       0.996 
+        4        2:1        1:0   +   0.996 
+        5        1:0        1:0       1 
+        6        1:0        1:0       0.996 
+        7        1:0        1:0       0.996 
+        8        1:0        1:0       1 
+        9        1:0        1:0       0.996 
+       10        1:0        1:0       0.996 
+       11        1:0        1:0       0.996 
+       12        1:0        1:0       0.996 
+       13        1:0        1:0       0.996 
+       14        1:0        1:0       0.996 
+       15        2:1        1:0   +   1 
+       16        1:0        1:0       0.996 
+       17        1:0        1:0       0.996 
+       18        1:0        1:0       0.996 
+       19        1:0        1:0       0.996 
+       20        1:0        1:0       0.996 
+       21        1:0        1:0       0.996 
+       22        1:0        1:0       0.996 
+       23        1:0        1:0       0.996 
+       24        1:0        1:0       0.996 
+       25        1:0        1:0       0.996 
+       26        1:0        1:0       0.996 
+       27        1:0        1:0       0.996 
+       28        1:0        1:0       0.996 
+       29        1:0        1:0       0.996 
+       30        1:0        1:0       0.996 
+       31        1:0        1:0       0.996 
+       32        1:0        1:0       0.996 
+       33        1:0        1:0       0.996 
+       34        1:0        1:0       1 
+       35        1:0        1:0       1 
+       36        1:0        1:0       0.996 
+       37        1:0        1:0       1 
+       38        1:0        1:0       0.996 
+       39        1:0        1:0       0.996 
+       40        1:0        1:0       0.996 
+       41        1:0        1:0       0.996 
+       42        1:0        1:0       0.996 
+       43        1:0        1:0       0.996 
+       44        1:0        1:0       0.996 
+       45        1:0        1:0       1 
+       46        1:0        1:0       0.996 
+       47        1:0        1:0       0.996 
+       48        1:0        1:0       0.996 
+       49        1:0        1:0       0.996 
+       50        1:0        1:0       0.996 
+       51        1:0        1:0       0.996 
+       52        1:0        1:0       0.996 
+       53        1:0        1:0       0.996 
+       54        1:0        1:0       0.996 
+       55        1:0        1:0       0.996 
+       56        1:0        1:0       0.996 
+       57        1:0        1:0       0.996 
+       58        1:0        1:0       0.996 
+       59        1:0        1:0       0.996 
+       60        1:0        1:0       0.996 
+       61        1:0        1:0       0.996 
+       62        1:0        1:0       0.996 
+       63        1:0        1:0       0.996 
+       64        1:0        1:0       0.996 
+       65        1:0        1:0       0.996 
+       66        1:0        1:0       0.996 
+       67        1:0        1:0       0.996 
+       68        1:0        1:0       0.996 
+       69        1:0        1:0       0.996 
+       70        1:0        1:0       0.996 
+       71        1:0        1:0       0.996 
+       72        1:0        1:0       0.996 
+       73        1:0        1:0       0.996 
+       74        1:0        1:0       0.996 
+       75        1:0        1:0       0.996 
+       76        1:0        1:0       0.996 
+       77        1:0        1:0       0.996 
+       78        1:0        1:0       0.996 
+       79        1:0        1:0       0.996 
+       80        1:0        1:0       0.996 
+       81        1:0        1:0       0.996 
+       82        1:0        1:0       0.996 
+       83        1:0        1:0       0.996 
+       84        1:0        1:0       0.996 
+       85        1:0        1:0       1 
+       86        1:0        1:0       0.996 
+       87        1:0        1:0       0.996 
+       88        1:0        1:0       0.996 
+       89        1:0        1:0       0.996 
+       90        1:0        1:0       0.996 
+       91        1:0        1:0       0.996 
+       92        1:0        1:0       0.996 
+       93        1:0        1:0       0.996 
+       94        1:0        1:0       0.996 
+       95        1:0        1:0       0.996 
+       96        1:0        1:0       0.996 
+       97        1:0        1:0       0.996 
+       98        1:0        1:0       0.996 
+       99        1:0        1:0       0.996 
+      100        1:0        1:0       0.996 
+      101        1:0        1:0       0.996 
+      102        1:0        1:0       0.996 
+      103        1:0        1:0       0.996 
+      104        1:0        1:0       0.996 
+      105        1:0        1:0       0.996 
+      106        1:0        1:0       0.996 
+      107        1:0        1:0       0.996 
+      108        1:0        1:0       0.996 
+      109        2:1        1:0   +   1 
+      110        1:0        1:0       0.996 
+      111        1:0        1:0       0.996 
+      112        2:1        2:1       1 
+      113        1:0        1:0       0.996 
+      114        1:0        1:0       0.996 
+      115        1:0        1:0       0.996 
+      116        1:0        1:0       0.996 
+      117        1:0        1:0       0.996 
+      118        1:0        1:0       0.996 
+      119        1:0        1:0       0.996 
+      120        1:0        1:0       0.996 
+      121        1:0        1:0       0.996 
+      122        1:0        1:0       0.996 
+      123        1:0        1:0       0.996 
+      124        1:0        1:0       0.996 
+      125        1:0        1:0       0.996 
+      126        1:0        1:0       0.996 
+      127        1:0        1:0       0.996 
+      128        1:0        1:0       0.996 
+      129        1:0        1:0       0.996 
+      130        1:0        1:0       0.996 
+      131        1:0        1:0       0.996 
+      132        1:0        1:0       0.996 
+      133        1:0        1:0       0.996 
+      134        1:0        1:0       0.996 
+      135        1:0        1:0       0.996 
+      136        1:0        1:0       0.996 
+      137        1:0        1:0       0.996 
+      138        1:0        1:0       0.996 
+      139        1:0        1:0       1 
+      140        1:0        1:0       0.996 
+      141        1:0        1:0       0.996 
+      142        1:0        1:0       0.996 
+      143        1:0        1:0       0.996 
+      144        2:1        1:0   +   1 
+      145        1:0        1:0       0.996 
+      146        1:0        1:0       0.996 
+      147        1:0        1:0       0.996 
+      148        1:0        1:0       0.996 
+      149        1:0        1:0       0.996 
+      150        1:0        1:0       0.996 
+      151        1:0        1:0       0.996 
+      152        1:0        1:0       0.996 
+      153        1:0        1:0       0.996 
+      154        1:0        1:0       0.996 
+      155        1:0        1:0       0.996 
+      156        1:0        1:0       0.996 
+      157        1:0        1:0       0.996 
+      158        1:0        1:0       0.996 
+      159        1:0        1:0       0.996 
+      160        1:0        1:0       0.996 
+      161        1:0        1:0       0.996 
+      162        1:0        1:0       0.996 
+      163        1:0        1:0       0.996 
+      164        1:0        1:0       0.996 
+      165        1:0        1:0       0.996 
+      166        1:0        1:0       0.996 
+      167        1:0        1:0       0.996 
+      168        1:0        1:0       0.996 
+      169        1:0        1:0       0.996 
+      170        1:0        1:0       0.996 
+      171        1:0        1:0       0.996 
+      172        1:0        1:0       0.996 
+      173        1:0        1:0       0.996 
+      174        1:0        1:0       0.996 
+      175        1:0        1:0       0.996 
+      176        1:0        1:0       0.996 
+      177        1:0        1:0       0.996 
+      178        1:0        1:0       1 
+      179        1:0        1:0       0.996 
+      180        1:0        1:0       0.996 
+      181        1:0        1:0       0.996 
+      182        1:0        1:0       0.996 
+      183        1:0        1:0       0.996 
+      184        1:0        1:0       0.996 
+      185        1:0        1:0       0.996 
+      186        1:0        1:0       0.996 
+      187        1:0        1:0       0.996 
+      188        1:0        1:0       0.996 
+      189        1:0        1:0       0.996 
+      190        1:0        1:0       0.996 
+      191        1:0        1:0       1 
+      192        1:0        1:0       0.996 
+      193        1:0        1:0       0.996 
+      194        1:0        1:0       0.996 
+      195        1:0        1:0       0.996 
+      196        1:0        1:0       0.996 
+      197        1:0        1:0       0.996 
+      198        1:0        1:0       0.996 
+      199        1:0        1:0       0.996 
+      200        1:0        1:0       1 
+      201        1:0        1:0       0.996 
+      202        1:0        1:0       0.996 
+      203        1:0        1:0       0.996 
+      204        1:0        1:0       0.996 
+      205        1:0        1:0       0.996 
+      206        1:0        1:0       0.996 
+      207        1:0        1:0       0.996 
+      208        1:0        1:0       0.996 
+      209        1:0        1:0       1 
+      210        1:0        1:0       0.996 
+      211        1:0        1:0       0.996 
+      212        1:0        1:0       0.996 
+      213        1:0        1:0       0.996 
+      214        1:0        1:0       0.996 
+      215        1:0        1:0       0.996 
+      216        1:0        1:0       0.996 
+      217        1:0        1:0       0.996 
+      218        1:0        1:0       0.996 
+      219        1:0        1:0       0.996 
+      220        1:0        1:0       1 
+      221        1:0        1:0       0.996 
+      222        1:0        1:0       0.996 
+      223        1:0        1:0       0.996 
+      224        1:0        1:0       0.996 
+      225        1:0        1:0       0.996 
+      226        1:0        1:0       0.996 
+      227        1:0        1:0       0.996 
+      228        1:0        1:0       0.996 
+      229        1:0        1:0       1 
+      230        1:0        1:0       1 
+      231        1:0        1:0       0.996 
+      232        1:0        1:0       0.996 
+      233        1:0        1:0       0.996 
+      234        1:0        1:0       0.996 
+      235        1:0        1:0       0.996 
+      236        1:0        1:0       0.996 
+      237        2:1        2:1       0.96 
+      238        1:0        1:0       1 
+      239        1:0        1:0       0.996 
+      240        1:0        1:0       0.996 
+      241        1:0        1:0       0.996 
+      242        1:0        1:0       0.996 
+      243        1:0        1:0       0.996 
+      244        1:0        1:0       0.996 
+      245        1:0        1:0       0.996 
+      246        1:0        1:0       1 
+      247        1:0        1:0       0.996 
+      248        1:0        1:0       0.996 
+      249        1:0        1:0       0.996 
+      250        1:0        1:0       0.996 
+      251        1:0        1:0       0.996 
+      252        1:0        1:0       0.996 
+      253        1:0        1:0       0.996 
+      254        1:0        1:0       0.996 
+      255        1:0        1:0       0.996 
+      256        1:0        1:0       0.996 
+      257        1:0        1:0       0.996 
+      258        1:0        1:0       0.996 
+      259        1:0        1:0       0.996 
+      260        1:0        1:0       0.996 
+      261        1:0        1:0       0.996 
+      262        1:0        1:0       0.996 
+      263        1:0        1:0       0.996 
+      264        1:0        1:0       0.996 
+      265        1:0        1:0       0.996 
+      266        1:0        1:0       0.996 
+      267        1:0        1:0       0.996 
+      268        2:1        2:1       0.96 
+      269        1:0        1:0       0.996 
+      270        1:0        1:0       0.996 
+      271        1:0        1:0       0.996 
+      272        1:0        1:0       0.996 
+      273        1:0        1:0       0.996 
+      274        1:0        1:0       0.996 
+      275        1:0        1:0       0.996 
+      276        1:0        1:0       0.996 
+      277        1:0        1:0       0.996 
+      278        1:0        1:0       0.996 
+      279        1:0        1:0       0.996 
+      280        1:0        1:0       0.996 
+      281        1:0        1:0       0.996 
+      282        1:0        1:0       0.996 
+      283        1:0        1:0       1 
+      284        1:0        1:0       0.996 
+      285        1:0        1:0       0.996 
+      286        1:0        1:0       0.996 
+      287        1:0        1:0       0.996 
+      288        1:0        1:0       0.996 
+      289        1:0        1:0       0.996 
+      290        1:0        1:0       0.996 
+      291        1:0        1:0       0.996 
+      292        1:0        1:0       0.996 
+      293        1:0        1:0       0.996 
+      294        1:0        1:0       0.996 
+      295        1:0        1:0       0.996 
+      296        1:0        1:0       0.996 
+      297        1:0        1:0       0.996 
+      298        1:0        1:0       0.996 
+      299        1:0        1:0       0.996 
+      300        1:0        1:0       0.996 
+      301        1:0        1:0       0.996 
+      302        1:0        1:0       0.996 
+      303        1:0        1:0       0.996 
+      304        1:0        1:0       0.996 
+      305        1:0        1:0       0.996 
+      306        1:0        1:0       0.996 
+      307        1:0        1:0       1 
+      308        1:0        1:0       0.996 
+      309        1:0        1:0       0.996 
+      310        1:0        1:0       0.996 
+      311        1:0        1:0       0.996 
+      312        1:0        1:0       0.996 
+      313        1:0        1:0       0.996 
+      314        1:0        1:0       0.996 
+      315        1:0        1:0       0.996 
+      316        1:0        1:0       0.996 
+      317        1:0        1:0       0.996 
+      318        1:0        1:0       0.996 
+      319        1:0        1:0       0.996 
+      320        1:0        1:0       0.996 
+      321        1:0        1:0       0.996 
+      322        1:0        1:0       0.996 
+      323        1:0        1:0       0.996 
+      324        1:0        1:0       0.996 
+      325        1:0        1:0       0.996 
+      326        1:0        1:0       0.996 
+      327        1:0        1:0       0.996 
+      328        1:0        1:0       0.996 
+      329        1:0        1:0       0.996 
+      330        1:0        1:0       0.996 
+      331        1:0        1:0       0.996 
+      332        1:0        1:0       0.996 
+      333        1:0        1:0       0.996 
+      334        1:0        1:0       0.996 
+      335        1:0        1:0       0.996 
+      336        1:0        1:0       0.996 
+      337        1:0        1:0       0.996 
+      338        1:0        1:0       0.996 
+      339        1:0        1:0       0.996 
+      340        1:0        1:0       0.996 
+      341        1:0        1:0       0.996 
+      342        1:0        1:0       0.996 
+      343        1:0        1:0       1 
+      344        1:0        1:0       0.996 
+      345        1:0        1:0       0.996 
+      346        1:0        1:0       0.996 
+      347        1:0        1:0       0.996 
+      348        1:0        1:0       0.996 
+      349        1:0        1:0       0.996 
+      350        1:0        1:0       0.996 
+      351        1:0        1:0       0.996 
+      352        1:0        1:0       0.996 
+      353        1:0        1:0       0.996 
+      354        1:0        1:0       0.996 
+      355        1:0        1:0       0.996 
+      356        1:0        1:0       0.996 
+      357        1:0        1:0       0.996 
+      358        1:0        1:0       1 
+      359        1:0        1:0       0.996 
+      360        1:0        1:0       0.996 
+      361        1:0        1:0       0.996 
+      362        1:0        1:0       0.996 
+      363        1:0        1:0       0.996 
+      364        1:0        1:0       0.996 
+      365        1:0        1:0       1 
+      366        1:0        1:0       0.996 
+      367        1:0        1:0       0.996 
+      368        1:0        1:0       0.996 
+      369        1:0        1:0       0.996 
+      370        1:0        1:0       0.996 
+      371        1:0        1:0       0.996 
+      372        1:0        1:0       0.996 
+      373        1:0        1:0       0.996 
+      374        1:0        1:0       0.996 
+      375        1:0        1:0       0.996 
+      376        1:0        1:0       0.996 
+      377        1:0        1:0       0.996 
+      378        1:0        1:0       0.996 
+      379        1:0        1:0       0.996 
+      380        1:0        1:0       0.996 
+      381        1:0        1:0       0.996 
+      382        1:0        1:0       0.996 
+      383        1:0        1:0       0.996 
+      384        1:0        1:0       0.996 
+      385        1:0        1:0       0.996 
+      386        1:0        1:0       0.996 
+      387        1:0        1:0       0.996 
+      388        1:0        1:0       0.996 
+      389        1:0        1:0       0.996 
+      390        1:0        1:0       0.996 
+      391        1:0        1:0       0.996 
+      392        1:0        1:0       0.996 
+      393        1:0        1:0       0.996 
+      394        1:0        1:0       0.996 
+      395        1:0        1:0       0.996 
+      396        1:0        1:0       0.996 
+      397        1:0        1:0       1 
+      398        1:0        1:0       0.996 
+      399        1:0        1:0       0.996 
+      400        1:0        1:0       0.996 
+      401        1:0        1:0       0.996 
+      402        1:0        1:0       0.996 
+      403        1:0        1:0       0.996 
+      404        1:0        1:0       1 
+      405        1:0        1:0       0.996 
+      406        1:0        1:0       0.996 
+      407        1:0        1:0       0.996 
+      408        1:0        1:0       0.996 
+      409        1:0        1:0       0.996 
+      410        1:0        1:0       1 
+      411        1:0        1:0       0.996 
+      412        1:0        1:0       1 
+      413        1:0        1:0       0.996 
+      414        1:0        1:0       0.996 
+      415        1:0        1:0       0.996 
+      416        1:0        1:0       0.996 
+      417        1:0        1:0       0.996 
+      418        1:0        1:0       0.996 
+      419        1:0        1:0       0.996 
+      420        1:0        1:0       0.996 
+      421        1:0        1:0       0.996 
+      422        1:0        1:0       0.996 
+      423        1:0        1:0       0.996 
+      424        1:0        1:0       0.996 
+      425        1:0        1:0       0.996 
+      426        1:0        1:0       0.996 
+      427        1:0        1:0       0.996 
+      428        1:0        1:0       0.996 
+      429        1:0        1:0       0.996 
+      430        1:0        1:0       0.996 
+      431        1:0        1:0       0.996 
+      432        1:0        1:0       0.996 
+      433        2:1        2:1       1 
+      434        1:0        1:0       1 
+      435        1:0        1:0       0.996 
+      436        1:0        1:0       0.996 
+      437        1:0        1:0       1 
+      438        1:0        1:0       0.996 
+      439        1:0        1:0       0.996 
+      440        1:0        1:0       0.996 
+      441        1:0        1:0       0.996 
+      442        1:0        1:0       0.996 
+      443        1:0        1:0       0.996 
+      444        1:0        1:0       0.996 
+      445        1:0        1:0       0.996 
+      446        1:0        1:0       0.996 
+      447        1:0        1:0       0.996 
+      448        1:0        1:0       0.996 
+      449        1:0        1:0       1 
+      450        1:0        1:0       0.996 
+      451        2:1        1:0   +   0.996 
+      452        1:0        1:0       0.996 
+      453        1:0        1:0       0.996 
+      454        1:0        1:0       0.996 
+      455        1:0        1:0       0.996 
+      456        1:0        1:0       0.996 
+      457        1:0        1:0       0.996 
+      458        1:0        1:0       0.996 
+      459        1:0        1:0       0.996 
+      460        1:0        1:0       0.996 
+      461        1:0        1:0       0.996 
+      462        1:0        1:0       0.996 
+      463        1:0        1:0       0.996 
+      464        1:0        1:0       1 
+      465        2:1        1:0   +   0.996 
+      466        1:0        1:0       0.996 
+      467        1:0        1:0       0.996 
+      468        1:0        1:0       0.996 
+      469        1:0        1:0       0.996 
+      470        2:1        1:0   +   1 
+      471        1:0        1:0       0.996 
+      472        1:0        1:0       0.996 
+      473        1:0        1:0       0.996 
+      474        1:0        1:0       0.996 
+      475        1:0        1:0       0.996 
+      476        1:0        1:0       0.996 
+      477        1:0        1:0       0.996 
+      478        1:0        1:0       0.996 
+      479        1:0        1:0       0.996 
+      480        1:0        1:0       0.996 
+      481        1:0        1:0       0.996 
+      482        1:0        1:0       0.996 
+      483        1:0        1:0       0.996 
+      484        1:0        1:0       0.996 
+      485        1:0        1:0       0.996 
+      486        1:0        1:0       0.996 
+      487        1:0        1:0       0.996 
+      488        1:0        1:0       0.996 
+      489        1:0        1:0       0.996 
+      490        2:1        2:1       1 
+      491        1:0        1:0       0.996 
+      492        1:0        1:0       0.996 
+      493        1:0        1:0       0.996 
+      494        1:0        1:0       0.996 
+      495        1:0        1:0       0.996 
+      496        1:0        1:0       0.996 
+      497        1:0        1:0       0.996 
+      498        1:0        1:0       0.996 
+      499        1:0        1:0       0.996 
+      500        1:0        1:0       0.996 
+      501        1:0        1:0       0.996 
+      502        1:0        1:0       0.996 
+      503        1:0        1:0       0.996 
+      504        1:0        1:0       0.996 
+      505        1:0        1:0       0.996 
+      506        1:0        1:0       0.996 
+      507        1:0        1:0       0.996 
+      508        1:0        1:0       0.996 
+      509        1:0        1:0       0.996 
+      510        1:0        1:0       0.996 
+      511        1:0        1:0       0.996 
+      512        1:0        1:0       0.996 
+      513        1:0        1:0       0.996 
+      514        1:0        1:0       0.996 
+      515        1:0        1:0       0.996 
+      516        1:0        1:0       0.996 
+      517        1:0        1:0       0.996 
+      518        1:0        1:0       0.996 
+      519        1:0        1:0       0.996 
+      520        1:0        1:0       0.996 
+      521        1:0        1:0       0.996 
+      522        1:0        1:0       0.996 
+      523        1:0        1:0       0.996 
+      524        1:0        1:0       0.996 
+      525        1:0        1:0       0.996 
+      526        1:0        1:0       0.996 
+      527        1:0        1:0       0.996 
+      528        1:0        1:0       0.996 
+      529        1:0        1:0       0.996 
+      530        1:0        1:0       0.996 
+      531        1:0        1:0       0.996 
+      532        1:0        1:0       0.996 
+      533        1:0        1:0       0.996 
+      534        1:0        1:0       0.996 
+      535        1:0        1:0       0.996 
+      536        1:0        1:0       0.996 
+      537        1:0        1:0       0.996 
+      538        1:0        1:0       0.996 
+      539        1:0        1:0       0.996 
+      540        1:0        1:0       0.996 
+      541        1:0        1:0       0.996 
+      542        1:0        1:0       0.996 
+      543        1:0        1:0       0.996 
+      544        1:0        1:0       0.996 
+      545        1:0        1:0       0.996 
+      546        1:0        1:0       0.996 
+      547        1:0        2:1   +   1 
+      548        1:0        1:0       0.996 
+      549        2:1        2:1       1 
+      550        1:0        2:1   +   1 
+      551        1:0        2:1   +   1 
+      552        1:0        1:0       0.996 
+      553        1:0        1:0       0.996 
+      554        1:0        1:0       1 
+      555        1:0        1:0       1 
+      556        1:0        1:0       1 
+      557        2:1        2:1       0.96 
+      558        1:0        1:0       1 
+      559        1:0        1:0       1 
+      560        2:1        2:1       0.96 
+      561        1:0        1:0       0.996 
+      562        2:1        2:1       0.96 
+      563        1:0        1:0       1 
+      564        1:0        1:0       1 
+      565        1:0        1:0       1 
+      566        1:0        1:0       0.996 
+      567        1:0        2:1   +   1 
+      568        1:0        1:0       1 
+      569        1:0        2:1   +   1 
+      570        2:1        1:0   +   1 
+      571        1:0        1:0       0.996 
+      572        1:0        1:0       1 
+      573        2:1        2:1       0.96 
+      574        1:0        1:0       1 
+      575        2:1        2:1       0.96 
+      576        1:0        1:0       0.996 
+      577        1:0        1:0       0.996 
+      578        1:0        1:0       0.996 
+      579        1:0        1:0       0.996 
+      580        1:0        1:0       0.996 
+      581        1:0        1:0       0.996 
+      582        1:0        1:0       0.996 
+      583        2:1        2:1       0.96 
+      584        1:0        1:0       0.996 
+      585        1:0        2:1   +   0.96 
+      586        1:0        1:0       0.996 
+      587        1:0        1:0       0.996 
+      588        1:0        1:0       0.996 
+      589        1:0        1:0       0.996 
+      590        1:0        1:0       0.996 
+      591        1:0        1:0       0.996 
+      592        1:0        1:0       0.996 
+      593        1:0        1:0       0.996 
+      594        1:0        1:0       0.996 
+      595        1:0        1:0       0.996 
+      596        2:1        2:1       1 
+      597        2:1        1:0   +   1 
+      598        1:0        1:0       0.996 
+      599        1:0        1:0       0.996 
+      600        2:1        2:1       0.96 
+      601        2:1        2:1       0.96 
+      602        1:0        1:0       0.996 
+      603        1:0        1:0       0.996 
+      604        1:0        2:1   +   1 
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.21 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         588               97.351  %
+Incorrectly Classified Instances        16                2.649  %
+Kappa statistic                          0.6384
+Mean absolute error                      0.0307
+Root mean squared error                  0.1624
+Relative absolute error                 45.9278 %
+Root relative squared error             83.0057 %
+Total Number of Instances              604     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.988    0.375    0.985      0.988    0.986      0.639    0.694     0.976     0
+                 0.625    0.012    0.682      0.625    0.652      0.639    0.694     0.393     1
+Weighted Avg.    0.974    0.361    0.973      0.974    0.973      0.639    0.694     0.953     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 573   7 |   a = 0
+   9  15 |   b = 1
+
+2. with ZeroR and StringToVector
