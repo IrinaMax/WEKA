@@ -1,0 +1,77 @@
+
+Question 4
+
+
+Of course, tiny changes in the ROC Area are probably insignificant, so let’s do a proper comparison using the Experimenter. Here, you can’t specify training and test sets separately, so we’ll just use the ReutersCorn-train and ReutersGrain-train training sets, with a 66% percentage split (“data randomized”) – which will be a lot faster than cross-validation.
+
+Set up the Experimenter to use these two files with the FilteredClassifier, the StringToWordVector filter, and the following four configurations:
+
+NaiveBayes with default parameters for StringToWordVector
+Three instances of MultinomialNaiveBayes with the three parameter settings for StringToWordVector that you tested above:
+
+default parameters
+outputWordCounts, lowerCaseTokens, and minTermFreq = 5
+the above settings plus SnowballStemmer and wordsToKeep = 800.
+How do these NaiveBayesMultinomial configurations compare with NaiveBayes?
+All NaiveBayesMultinomial configurations perform significantly better than NaiveBayes.
+ 
+ 
+ Weka output:
+
+Tester:     weka.experiment.PairedCorrectedTTester -G 3,4,5 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   2
+Resultsets: 4
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       4/17/18 10:02 PM
+
+
+Dataset                   (1) meta.Fil | (2) meta. (3) meta. (4) meta.
+----------------------------------------------------------------------
+'Reuters-21578 Corn ModAp (10)   91.77 |   97.46 v   95.44 v   95.23 v
+'Reuters-21578 Grain ModA (10)   85.16 |   96.31 v   94.19 v   94.26 v
+----------------------------------------------------------------------
+                               (v/ /*) |   (2/0/0)   (2/0/0)   (2/0/0)
+
+
+Key:
+(1) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayes' -4523450618538717400
+(2) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+(3) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -C -N 0 -L -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 5 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+(4) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 800 -prune-rate -1.0 -C -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -stopwords-handler weka.core.stopwords.Null -M 5 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+
+
+Question 6
+
+
+The Experimenter’s default “Comparison field” is Percent_correct, which, as we know, may not be appropriate for this data. Change it to Area_under_ROC. (You don’t have to re-do the experiment; just the test.)
+
+What are the significant differences now?
+For the Grain dataset, NaiveBayesMultinomial configurations perform significantly better than NaiveBayes
+
+WEKA output:
+
+Tester:     weka.experiment.PairedCorrectedTTester -G 3,4,5 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Area_under_ROC
+Datasets:   2
+Resultsets: 4
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       4/17/18 10:03 PM
+
+
+Dataset                   (1) meta.Fi | (2) meta (3) meta (4) meta
+------------------------------------------------------------------
+'Reuters-21578 Corn ModAp (10)   0.96 |   0.94     0.95     0.96  
+'Reuters-21578 Grain ModA (10)   0.94 |   0.98 v   0.97 v   0.97 v
+------------------------------------------------------------------
+                              (v/ /*) |  (1/1/0)  (1/1/0)  (1/1/0)
+
+
+Key:
+(1) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayes' -4523450618538717400
+(2) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+(3) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -C -N 0 -L -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 5 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+(4) meta.FilteredClassifier '-F \"unsupervised.attribute.StringToWordVector -R first-last -W 800 -prune-rate -1.0 -C -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -stopwords-handler weka.core.stopwords.Null -M 5 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -S 1 -W bayes.NaiveBayesMultinomial' -4523450618538717400
+
