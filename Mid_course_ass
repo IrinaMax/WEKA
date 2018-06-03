@@ -299,3 +299,113 @@ Weighted Avg.    0.737    0.280    0.748      0.737    0.740      0.444    0.695
  14  6 |  a = bad
   9 28 |  b = good
 
+Q9------------------------------------------
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \"weka.core.tokenizers.WordTokenizer -delimiters \\\" \\\\r\\\\n\\\\t.,;:\\\\\\\'\\\\\\\"()?!\\\"\"" -S 1 -W weka.classifiers.bayes.NaiveBayes
+Relation:     Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1
+Instances:    1554
+Attributes:   2
+              Text
+              class-att
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.bayes.NaiveBayes  on data filtered through weka.filters.unsupervised.attribute.StringToWordVector -R 1 -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
+
+Filtered Header
+@relation 'Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"'
+
+@attribute class-att {0,1}
+@attribute &#3 numeric
+@attribute &lt numeric
+@attribute - numeric
+@attribute -- numeric
+@attribute 0 numeric
+@attribute 0/92 numeric
+@attribute 00 numeric
+...........................
+Time taken to build model: 1.05 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.95 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         522               86.4238 %
+Incorrectly Classified Instances        82               13.5762 %
+Kappa statistic                          0.2934
+Mean absolute error                      0.1354
+Root mean squared error                  0.3627
+Relative absolute error                202.2276 %
+Root relative squared error            185.4126 %
+Total Number of Instances              604     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.864    0.125    0.994      0.864    0.924      0.388    0.962     0.998     0
+                 0.875    0.136    0.210      0.875    0.339      0.388    0.957     0.439     1
+Weighted Avg.    0.864    0.125    0.963      0.864    0.901      0.388    0.962     0.976     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 501  79 |   a = 0
+   3  21 |   b = 1
+and for multinomial NB
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \"weka.core.tokenizers.WordTokenizer -delimiters \\\" \\\\r\\\\n\\\\t.,;:\\\\\\\'\\\\\\\"()?!\\\"\"" -S 1 -W weka.classifiers.bayes.NaiveBayesMultinomial
+Relation:     Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1
+Instances:    1554
+Attributes:   2
+              Text
+              class-att
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.bayes.NaiveBayesMultinomial  on data filtered through weka.filters.unsupervised.attribute.StringToWordVector -R 1 -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
+
+Filtered Header
+@relation 'Reuters-21578 Corn ModApte Train-weka.filters.unsupervised.attribute.NumericToBinary-weka.filters.unsupervised.instance.RemoveFolds-S0-N5-F1-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"'
+
+@attribute class-att {0,1}
+@attribute &#3 numeric
+@attribute &lt 
+.............................
+Time taken to build model: 0.25 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.08 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         566               93.7086 %
+Incorrectly Classified Instances        38                6.2914 %
+Kappa statistic                          0.4573
+Mean absolute error                      0.0612
+Root mean squared error                  0.2311
+Relative absolute error                 91.3537 %
+Root relative squared error            118.1438 %
+Total Number of Instances              604     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.945    0.250    0.989      0.945    0.966      0.493    0.952     0.998     0
+                 0.750    0.055    0.360      0.750    0.486      0.493    0.952     0.676     1
+Weighted Avg.    0.937    0.242    0.964      0.937    0.947      0.493    0.952     0.985     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 548  32 |   a = 0
+   6  18 |   b = 1
+
